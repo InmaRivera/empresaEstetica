@@ -255,7 +255,7 @@ public class BaseDatos
 
 			statement = connection.createStatement();
 			rs = statement.executeQuery( "SELECT * FROM clientes");					
-			
+
 
 		}
 		catch (SQLException sqle){}
@@ -286,6 +286,227 @@ public class BaseDatos
 		catch (SQLException sqle){}
 		return (resultado);
 	}
+
+	public int AltaProducto(Connection connection, String sentencia)
+	{
+		//Creamos la instrucción para conexión de alta producto
+		//Devuelve 0 para ok
+		//devuelve un 1 para error
+		int resultado = 1;
+		try
+		{
+			//Crear una sentencia
+			statement = connection.createStatement();
+			//y ejecutar la sentencia SQL
+			if((statement.executeUpdate(sentencia))==1)
+			{
+				resultado = 0;
+			}
+			else
+			{
+				resultado = 1;
+			}
+		}
+		catch (SQLException sqle){}
+		return (resultado);
+	}
+
+	public String ConsultaProductos()
+	{
+		//Creamos la sentencia SQL para la consulta 
+		String contenido = "";
+		sentencia = "SELECT * FROM productos";
+		try
+		{
+			statement = connection.createStatement();
+			// Crear un objeto ResultSet para guardar lo obtenido 
+			// y ejecutar la sentencia SQL 
+			resultSet = statement.executeQuery(sentencia);
+			// Por cada departamento, meter sus datos en el Choice
+			while(resultSet.next())
+			{
+				contenido = contenido + (resultSet.getInt("idProducto")+
+						"-"+ resultSet.getString("tipoProducto")+
+						"-"+ resultSet.getString("cantidadProducto")+
+						"-"+ resultSet.getString("ivaProducto")+"\n");
+			}
+		}
+		catch (SQLException e){}
+		return contenido;
+
+	}
+	public ResultSet rellenarProducto(Connection connection)
+	{
+		//Creamos la instrucción para la consulta de personas (rellenar el choice)
+		ResultSet rs = null;
+		try
+		{
+			statement = connection.createStatement();
+			rs = statement.executeQuery( "SELECT * FROM productos");					
+		}
+		catch (SQLException sqle){}
+		return (rs);
+	}
+
+	public int BajaProducto(int idProducto)
+	{
+		//Aplicamos la sentencia para la baja personas
+		int resultado = 0;
+		//Devolver 0 --> borrado con éxito
+		//Devolver 1 ---> Error
+		try
+		{
+			//Crear una sentencia
+			statement = connection.createStatement();
+			//Ejecutamos el comando borrar
+			String sentencia = "DELETE FROM productos WHERE idProducto = "+ idProducto;
+			statement.executeUpdate(sentencia);
+		}
+		catch (SQLException sqle)
+		{
+			//Error devuelve 1
+			resultado = -1;
+		}
+		return (resultado);
+	}
+
+	public ResultSet buscarProducto(Connection connection, String sentencia)
+	{
+		//Instrucción para ejecutar la sentencia 
+		ResultSet rs = null;
+		try
+		{
+			statement = connection.createStatement();
+			rs = statement.executeQuery(sentencia);					
+		}
+		catch (SQLException sqle){}
+		return (rs);
+	}
+
+	public String ConsultaCompras()
+	{
+		//Creamos la instrucción para ejecutar la sentencia en la consulta de compras
+		String contenido = "";
+		sentencia = "SELECT * FROM compras";
+		try
+		{
+			statement = connection.createStatement();
+			// Crear un objeto ResultSet para guardar lo obtenido 
+			// y ejecutar la sentencia SQL 
+			resultSet = statement.executeQuery(sentencia);
+			// Mostramos en choice los clientes de la empresa
+			while(resultSet.next())
+			{
+				contenido = contenido + (resultSet.getInt("idCompra")+
+						"-"+ resultSet.getString("idClienteFK")+
+						"-"+ resultSet.getString("idProductoFK")+"\n");
+			}
+		}
+		catch (SQLException e){}
+		return contenido;
+	}
+
+	public int AltaCompra(Connection connection, String sentencia)
+	{
+		//Creamos la instrucción para conexión de alta compra
+				//Devuelve 0 para ok
+				//devuelve un 1 para error
+				int resultado = 1;
+				try
+				{
+					//Crear una sentencia
+					statement = connection.createStatement();
+					//y ejecutar la sentencia SQL
+					if((statement.executeUpdate(sentencia))==1)
+					{
+						resultado = 0;
+					}
+					else
+					{
+						resultado = 1;
+					}
+				}
+				catch (SQLException sqle){}
+				return (resultado);
+	}
+
+	public ResultSet elegirCompra(Connection connection)
+	{
+		//Creanmos la instrucción para ejecutar la sentencia buscar la compra de nuestra base
+				ResultSet rs = null;
+				try
+				{
+
+					statement = connection.createStatement();
+					rs = statement.executeQuery( "SELECT * FROM compras");					
+
+
+				}
+				catch (SQLException sqle){}
+				return (rs);
+	}
+
+	public int BajaCompra(int idCompra)
+	{
+		//Creamos la instrucción con una sentencia para la baja de la compra
+		int resultado = 0;
+		//Devolver 0 --> borrado con éxito
+		//Devolver 1 ---> Error
+		try
+		{
+			//Crear una sentencia
+			statement = connection.createStatement();
+			//Ejecutamos el comando borrar
+			String sentencia = "DELETE FROM compras WHERE idCompra = "+ idCompra;
+			statement.executeUpdate(sentencia);
+			System.out.println(sentencia);
+		}
+		catch (SQLException sqle)
+		{
+			//Error devuelve 1
+			resultado = -1;
+		}
+		return (resultado);
+	}
+
+	public int ModificacionCompra(String sentencia)
+	{
+		//Creamos las instrucciones para ejecutar la modidificación de clientes
+		//Devuelve 0 para ok
+		//devuelve un 1 para error
+		int resultado = 1;
+		try
+		{
+			//Crear una sentencia
+			statement = connection.createStatement();
+			statement.executeUpdate(sentencia);
+			//y ejecutar la sentencia SQL
+			if((statement.executeUpdate(sentencia))==1)
+			{
+				resultado = 0;
+			}
+			else
+			{
+				resultado = 1;
+			}
+		}
+		catch (SQLException sqle){}
+		return (resultado);
+	}
+
+	public ResultSet buscarCompra(Connection connection, String sentencia)
+	{
+		//Instrucción para ejecutar la sentencia 
+				ResultSet rs = null;
+				try
+				{
+					statement = connection.createStatement();
+					rs = statement.executeQuery(sentencia);					
+				}
+				catch (SQLException sqle){}
+				return (rs);
+	}
 }
+	
 
 

@@ -103,23 +103,25 @@ public class AltaPersona implements WindowListener, ActionListener
 				String sentencia = "INSERT INTO personas VALUES (null, '" ;
 				sentencia+=  nombre + "', '" + apellidos + "', '" + dni 
 						+"', '" + domicilio + "', '" + telefono + "', '" + email + "');";
+				System.out.println(sentencia);
 
 				if((bd.AltaPersona(connection, sentencia))==0) 
 				{
 					//Si todo bien
 					lblMensaje.setText("Alta de Persona correcta");
-					dlgFeedback.setVisible(true);
-					ventana.setVisible(false);
+					//dlgFeedback.setVisible(true);
+					//ventana.setVisible(false);
 				}
 				else 
 				{
 					// si no sale mensaje de error
 					lblMensaje.setText("Error en Alta de Persona");
-					mostrarDialogo();
+					
 				}
 			}
 			//Desconectamos base de datos
 			bd.desconectar();
+			mostrarDialogo();
 		}
 	}
 
@@ -127,8 +129,8 @@ public class AltaPersona implements WindowListener, ActionListener
 	{
 		// ventana del mensaje
 		dlgFeedback.setTitle("Alta Cliente");
-		dlgFeedback.setSize(200,150);
 		dlgFeedback.setLayout(new FlowLayout());
+		dlgFeedback.setSize(200,150);
 		dlgFeedback.addWindowListener(this);
 		dlgFeedback.add(lblMensaje);
 		dlgFeedback.setLocationRelativeTo(null);

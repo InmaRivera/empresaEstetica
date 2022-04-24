@@ -5,7 +5,6 @@ import java.awt.Dialog;
 import java.awt.FlowLayout;
 import java.awt.Frame;
 import java.awt.Label;
-import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
@@ -13,67 +12,95 @@ import java.awt.event.WindowListener;
 import java.sql.Connection;
 import java.sql.ResultSet;
 
-public class AltaCliente implements WindowListener, ActionListener
+public class AltaCompras implements WindowListener, ActionListener
 {
 	//Creamos los objetos necesario para la clase Alta cliente
-	Frame ventana = new Frame ("Alta de cliente");
+	Frame ventana = new Frame ("Nueva Compra");
 	Dialog dlgFeedback = new Dialog (ventana, "Feedback", true);
 	Label lblMensaje = new Label ("XXXXXXXXXXXXXXXXXXXXXXX");
 
-	TextField txtDescuento = new TextField(10);
-	Label lblDescuento = new Label("Descuento cliente");
-	Label lblCliente = new Label("Escoge un cliente");
-	
+	Label lblCliente1 = new Label("Cliente                 ");
+	Label lblProducto1 = new Label("Producto                  ");
+
 	Button btnAceptar = new Button ("Aceptar");
 	Button btnCancelar = new Button ("Cancelar");
 	//choise para elegir a la persona
+	Choice choProducto = new Choice();
 	Choice choPersonas = new Choice();
-		
+
 	BaseDatos bd = new BaseDatos();
 	Connection connection = null;
 	ResultSet rs = null;
 
-	public AltaCliente()
+	public AltaCompras()
 	{
+
 		//Configuración de la ventana y Listeners
 		ventana.setLayout(new FlowLayout());
-		ventana.setSize(320,200);
+		ventana.setSize(280,200);
 		ventana.setVisible(true);
 		ventana.addWindowListener(this);
-		ventana.setResizable(false);
+		//ventana.setResizable(false);
 		ventana.setLocationRelativeTo(null);
 		//Mostramos en pantalla y botones necesarios
-		ventana.add(lblDescuento);
-		ventana.add(txtDescuento);
-		ventana.add(lblCliente);
+		ventana.add(lblCliente1);
 		ventana.add(choPersonas);
-		
+
+		ventana.add(lblProducto1);
+		ventana.add(choProducto);
+
 		//Método rellenar choice
-		rellenarClienteA();
+		rellenarChoiceClientes();
+		rellenarChoiceProductos();
 		btnAceptar.addActionListener(this);
 		btnCancelar.addActionListener(this);
 		ventana.add(btnAceptar);
 		ventana.add(btnCancelar);	
 	}
-	private void rellenarClienteA()
+	private void rellenarChoiceClientes()
 	{
-		//Rellenar choice
+		// Rellenar el Choice
 		choPersonas.removeAll();//validación
-		choPersonas.add("Seleccione un cliente...");
-		//choice para seleccionar a la persona que buscamos
-		rs=bd.rellenarPersonas(bd.conectar());
+		choPersonas.add("Seleccione un cliente...       ");
+		// Conectar BD
+		bd.conectar();
+		//Sacar a los clientes de la tabla 
+		rs=bd.elegirPersonas(bd.conectar());
 		try
 		{
 			while (rs.next())
 			{
-				choPersonas.add(rs.getInt("idPersona") + "-" +
-						rs.getString("nombrePersona") + "-" +
-						rs.getString("apellidosPersona")+"-" + 
-						rs.getString("dniPersona"));
+				choPersonas.add(rs.getInt("idCliente") + "-" +
+						rs.getString("descuentoCliente") + "-" +
+						rs.getString("idPersonaFK"));
 			}
 		}
 		catch(Exception e){}
-		//desconectamos de la base
+		//Desconectar la base de datos
+		bd.desconectar();
+	}
+	private void rellenarChoiceProductos()
+	{
+		// Rellenar el Choice
+		choProducto.removeAll();//validación
+		choProducto.add("Seleccionar una producto...          ");
+		// Conectar BD
+		bd.conectar();
+		//Sacar a los clientes de la tabla 
+		rs=bd.rellenarProducto(bd.conectar());
+		try
+		{
+			while (rs.next())
+			{
+				choProducto.add(rs.getInt("idProducto") + "-" +
+						rs.getString("tipoProducto") + "-" +
+						rs.getString("cantidadProducto")+"-" + 
+						rs.getString("ivaProducto"));
+
+			}
+		}
+		catch(Exception e){}
+		//Desconectar la base de datos
 		bd.desconectar();
 	}
 	@Override
@@ -91,40 +118,41 @@ public class AltaCliente implements WindowListener, ActionListener
 			//conectar la base de datos
 
 			connection = bd.conectar();
-			//Coger los datos del formulario:
-			String descuento = txtDescuento.getText();
-			
 			//Validación
-			if(descuento.equals(""))
+			if (choPersonas.getSelectedItem().equals("Seleccione un cliente...       "))
 			{
-				lblMensaje.setText("Debe aplicar un descuento");
-				
+				lblMensaje.setText("Debe seleccionar un cliente");
+
 			}
-			else if (choPersonas.getSelectedItem().equals("Seleccione un cliente..."))
+			//si intentamos borrar "Seleccionar persona" nos avisará
+			else if (choProducto.getSelectedItem().equals("Seleccionar una producto...          "))
 			{
-				lblMensaje.setText("seleccione un cliente");
-				
+				//mensaje de error si intentas seleccionar persona
+				lblMensaje.setText("Debes seleccionar una producto");
+
 			}
 			//Si todo está bien instrucción para insertar al cliente
 			else
 			{
 				String[] seleccionado = choPersonas.getSelectedItem().split("-");
-				int idPersonaFK = Integer.parseInt(seleccionado[0]);
+				int idClienteFK = Integer.parseInt(seleccionado[0]);
+				String[] seleccionado1 = choProducto.getSelectedItem().split("-");
+				int idProductoFK = Integer.parseInt(seleccionado1[0]);
 				// Hacer el insert
-				String sentencia = "INSERT INTO clientes VALUES (null, '" ;
-				sentencia+=  descuento + "'," + "'" + idPersonaFK + "'" +");";
+				String sentencia = "INSERT INTO compras VALUES (null, '";
+				sentencia+= + idClienteFK + "'," + "'" + idProductoFK + "'" +");";
 				System.out.println(sentencia);
 
-				if((bd.AltaCliente(connection, sentencia))==0) 
+				if((bd.AltaCompra(connection, sentencia))==0) 
 				{
 					// Todo bien
-					lblMensaje.setText("Alta de cliente correcta");	
+					lblMensaje.setText("Nueva compra correcta");	
 					ventana.setVisible(false);	
 				}
 				else 
 				{
 					// si no sale mensaje de error
-					lblMensaje.setText("Error en Alta de Cliente");	
+					lblMensaje.setText("Error registro compra");	
 				}
 			}
 			//Desconectamos base de datos
@@ -135,7 +163,6 @@ public class AltaCliente implements WindowListener, ActionListener
 	private void mostrarDialogo()
 	{
 		// Configuramos el diálogo
-		dlgFeedback.setTitle("Alta Cliente");
 		dlgFeedback.setSize(280,150);
 		dlgFeedback.setLayout(new FlowLayout());
 		//Añadimos listeners
@@ -154,8 +181,8 @@ public class AltaCliente implements WindowListener, ActionListener
 	public void windowOpened(WindowEvent e)
 	{
 		// TODO Auto-generated method stub
-	}
 
+	}
 	@Override
 	public void windowClosing(WindowEvent e)
 	{
@@ -169,22 +196,20 @@ public class AltaCliente implements WindowListener, ActionListener
 		{
 			ventana.setVisible(false);	
 		}
-	}
 
+	}
 	@Override
 	public void windowClosed(WindowEvent e)
 	{
 		// TODO Auto-generated method stub
 
 	}
-
 	@Override
 	public void windowIconified(WindowEvent e)
 	{
 		// TODO Auto-generated method stub
 
 	}
-
 	@Override
 	public void windowDeiconified(WindowEvent e)
 	{
@@ -195,11 +220,12 @@ public class AltaCliente implements WindowListener, ActionListener
 	public void windowActivated(WindowEvent e)
 	{
 		// TODO Auto-generated method stub
+
 	}
 	@Override
 	public void windowDeactivated(WindowEvent e)
 	{
 		// TODO Auto-generated method stub
+
 	}
 }
-

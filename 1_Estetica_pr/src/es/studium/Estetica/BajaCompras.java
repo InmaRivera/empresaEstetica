@@ -11,11 +11,12 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.sql.ResultSet;
 
-public class BajaPersona implements WindowListener, ActionListener
+public class BajaCompras implements WindowListener, ActionListener
 {
-	Frame ventana = new Frame ("Eliminar persona");
-	Label lblCabecera = new Label ("Elegir persona");
-	Choice choPersonas = new Choice();
+	//Creamos los objetos necesarios para la clase de Baja cliente
+	Frame ventana = new Frame ("Eliminar compra");
+	Label lblCabecera = new Label ("Elegir compra");
+	Choice choCompras = new Choice();
 	Button btnBorrar = new Button("Borrar");
 
 	Dialog dlgConfirmacion = new Dialog(ventana,"Confirmación", true);
@@ -30,8 +31,7 @@ public class BajaPersona implements WindowListener, ActionListener
 	ResultSet rs = null;
 	int idPersonaBorrar = 0;
 
-	//Constructor
-	public BajaPersona()
+	public BajaCompras()
 	{
 		//Listener
 		ventana.addWindowListener(this);
@@ -39,52 +39,50 @@ public class BajaPersona implements WindowListener, ActionListener
 
 		//Pantalla
 		ventana.setLayout(new FlowLayout());
-		ventana.setSize(310,150);
+		ventana.setSize(300,150);
 		ventana.setResizable(false);
 		ventana.add(lblCabecera);
-
-
-		//metodo rellenar choice
-		rellenarChoicePersonas();
-		ventana.add(choPersonas);
+		//Método para rellenar choice
+		rellenarChoiceCompras();
+		ventana.add(choCompras);
 		ventana.add(btnBorrar);
-		//mostramos pantalla
+		//Mostrar ventana
 		ventana.setLocationRelativeTo(null);
 		ventana.setVisible(true);
 	}
-	private void rellenarChoicePersonas()
+	private void rellenarChoiceCompras()
 	{
 		// Rellenar el Choice
-		choPersonas.removeAll();//validación
-		choPersonas.add("Seleccionar una persona...");
+		choCompras.removeAll();//validación
+		choCompras.add("Seleccione una compra...");
 		// Conectar BD
 		bd.conectar();
 		//Sacar a los clientes de la tabla 
-		rs=bd.rellenarPersonas(bd.conectar());
+		rs=bd.elegirCompra(bd.conectar());
 		try
 		{
 			while (rs.next())
 			{
-				choPersonas.add(rs.getInt("idPersona") + "-" +
-						rs.getString("nombrePersona") + "-" +
-						rs.getString("apellidosPersona")+"-" + 
-						rs.getString("dniPersona"));
-
+				choCompras.add(rs.getInt("idCompra") + "-" +
+						rs.getString("idClienteFK") + "-" +
+						rs.getString("idProductoFK"));
 			}
 		}
 		catch(Exception e){}
 		//Desconectar la base de datos
 		bd.desconectar();
 	}
+	@Override
 	public void actionPerformed(ActionEvent evento)
-	{		//si seleccionamos boton borrar
+	{
+		//si seleccionamos boton borrar
 		if (evento.getSource().equals(btnBorrar))
 		{
 			//si intentamos borrar "Seleccionarpersona
-			if ((choPersonas.getSelectedItem().equals("Seleccionar una persona...")))
+			if ((choCompras.getSelectedItem().equals("Seleccione una compra...")))
 			{
 				//mensaje de error si intentas seleccionar persona
-				lblMensaje.setText("Debes seleccionar una persona");
+				lblMensaje.setText("Debes seleccionar una compra");
 				mostrarMensaje();
 			}
 			else
@@ -103,26 +101,25 @@ public class BajaPersona implements WindowListener, ActionListener
 			//Al pulsar botón si conecta con la base de datos
 			bd.conectar();
 			//cadena para coger los datos 
-			String[] array = choPersonas.getSelectedItem().split("-");
-			int resultado = bd.BajaPersona(Integer.parseInt(array[0]));
+			String[] array = choCompras.getSelectedItem().split("-");
+			int resultado = bd.BajaCompra(Integer.parseInt(array[0]));
 			if (resultado == 0)
 			{
 				//si todo sale bien mensaje de correcto
 				lblMensaje.setText("Se ha eliminado correctamente");
 				dlgConfirmacion.setVisible(false);
-				mostrarMensaje();	
+				mostrarMensaje();
 			}
 			else 
 			{		
 				//sino sale bien mensaje de error
 				lblMensaje.setText("Se ha producido un error en el borrado");
-				//mostramos el dlg de mensaje error
-				mostrarMensaje();
 			}
 		}
 		//Desconectar de la base 		
 		bd.desconectar();
-		rellenarChoicePersonas();
+		//Validación 
+		rellenarChoiceCompras();
 	}
 	private void mostrarMensaje()
 	{
@@ -135,7 +132,6 @@ public class BajaPersona implements WindowListener, ActionListener
 		//lblMensaje.setText("Error");
 		dlgMensaje.setLocationRelativeTo(null);
 		dlgMensaje.setVisible(true);
-		//dlgConfirmacion.setVisible(false);
 	}
 	private void mostrarDialogo()
 	{ 
@@ -148,30 +144,33 @@ public class BajaPersona implements WindowListener, ActionListener
 		dlgConfirmacion.setLayout(new FlowLayout());
 		dlgConfirmacion.setSize(400,100);
 		dlgConfirmacion.add(lblConfirmacion);
-		lblConfirmacion.setText("¿Está seguro de borrar a " + choPersonas.getSelectedItem()+ "?");
+		lblConfirmacion.setText("¿Está seguro de borrar a " + choCompras.getSelectedItem()+ "?");
 		dlgConfirmacion.add(btnSi);
 		dlgConfirmacion.add(btnNo);
-		//Mostramos la ventana
+		//Mostrar diálogo
 		dlgConfirmacion.setLocationRelativeTo(null);
 		dlgConfirmacion.setVisible(true);
 	}
 	@Override
 	public void windowOpened(WindowEvent e)
 	{
-		// TODO Auto-generated method stub		
+		// TODO Auto-generated method stub
+
 	}
 	@Override
 	public void windowClosing(WindowEvent e)
 	{
-		//Cerramos las ventanas
+		//Si diáologo de confirmacion es activo cerrarlo primero
 		if(dlgConfirmacion.isActive())
 		{
 			dlgConfirmacion.setVisible(false);
 		}
+		//Si es el diáologo de mensaje el activo cerrarlo primero
 		else if (dlgMensaje.isActive())
 		{
 			dlgMensaje.setVisible(false);
 		}
+		//Sino podemos cerrar la ventana principal
 		else
 		{
 			ventana.setVisible(false);
@@ -180,26 +179,32 @@ public class BajaPersona implements WindowListener, ActionListener
 	@Override
 	public void windowClosed(WindowEvent e)
 	{
-		// TODO Auto-generated method stub		
+		// TODO Auto-generated method stub
+
 	}
 	@Override
 	public void windowIconified(WindowEvent e)
 	{
-		// TODO Auto-generated method stub		
+		// TODO Auto-generated method stub
+
 	}
 	@Override
 	public void windowDeiconified(WindowEvent e)
 	{
-		// TODO Auto-generated method stu		
+		// TODO Auto-generated method stub
+
 	}
 	@Override
 	public void windowActivated(WindowEvent e)
 	{
-		// TODO Auto-generated method stub		
+		// TODO Auto-generated method stub
+
 	}
 	@Override
 	public void windowDeactivated(WindowEvent e)
 	{
-		// TODO Auto-generated method stub		
+		// TODO Auto-generated method stub
+
 	}
 }
+

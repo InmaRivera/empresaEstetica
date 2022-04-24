@@ -12,12 +12,13 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.sql.Connection;
 import java.sql.ResultSet;
-public class ModificacionPersona implements WindowListener, ActionListener
-{	
+
+public class ModificacionProductos implements WindowListener, ActionListener
+{
 	//ventana seleccion
-	Frame ventana = new Frame ("Modificar persona");
-	Label lblCabecera = new Label ("Elegir persona");
-	Choice choPersonas = new Choice();
+	Frame ventana = new Frame ("Modificar producto");
+	Label lblCabecera = new Label ("Elegir producto");
+	Choice choProducto = new Choice();
 	Button btnEditar = new Button("Editar");
 
 	Dialog dlgMensaje = new Dialog(ventana,"Mensaje", true);
@@ -30,26 +31,23 @@ public class ModificacionPersona implements WindowListener, ActionListener
 	Button btnCancelar = new Button("Cancelar");
 
 	//Frame ventanaModificacion = new Frame ("Modificar persona");
-	TextField txtNombre = new TextField(10);
-	Label lblNombre = new Label("Nombre");
-	TextField txtApellidos = new TextField(10);
-	Label lblApellidos = new Label("Apellidos");
-	TextField txtDni = new TextField(10);
-	Label lblDni = new Label("Dni o NIF");
-	TextField txtDomicilio = new TextField(10);
-	Label lblDomicilio = new Label("Domicilio");
-	TextField txtTelefono = new TextField(10);
-	Label lblTelefono = new Label("Teléfono");
-	TextField txtEmail= new TextField(10);
-	Label lblEmail = new Label("Email");
-
+	TextField txtTipo = new TextField(10);
+	Label lblTipo = new Label("Nombre producto    ");
+	TextField txtCantidad = new TextField(10);
+	Label lblCantidad = new Label("Cantidad            ");
+	TextField txtIVA = new TextField(10);
+	Label lblIVA = new Label("IVA                ");
+	TextField txtPrecioVenta = new TextField(10);
+	Label lblPrecioVenta = new Label("Precio de venta ");
+	TextField txtCompra = new TextField(10);
+	Label lblCompra = new Label("Precio de compra");
 
 	BaseDatos bd = new BaseDatos();
-	int idPersona = 0;
+	int idProducto = 0;
 	Connection connection = null;
 	ResultSet rs = null;
 
-	public ModificacionPersona()
+	public ModificacionProductos()
 	{
 		//Listener
 		ventana.addWindowListener(this);
@@ -63,34 +61,33 @@ public class ModificacionPersona implements WindowListener, ActionListener
 		//usuario no puede cambiar el tamaño de la ventana ejecutada
 		ventana.setResizable(false);
 		ventana.add(lblCabecera);
-		
+
 		//rellenamos el choice
-		rellenarChoicePersonasM();
-		ventana.add(choPersonas);
+		rellenarChoiceProductos();
+		ventana.add(choProducto);
 		ventana.add(btnEditar);
 		//mostrar ventana
 		ventana.setLocationRelativeTo(null);
 		ventana.setVisible(true);
 	}
-
-	private void rellenarChoicePersonasM()
+	private void rellenarChoiceProductos()
 	{
 		// Rellenar el Choice
-		choPersonas.removeAll();//validación
-		choPersonas.add("Seleccionar una persona...");
+		choProducto.removeAll();//validación
+		choProducto.add("Seleccionar una producto...");
 		// Conectar BD
 		bd.conectar();
 		//Sacar a los clientes de la tabla 
-		rs=bd.rellenarPersonas(bd.conectar());
+		rs=bd.rellenarProducto(bd.conectar());
 		try
 		{
 			while (rs.next())
 			{
-				//el choice que muestra a los clientes/personas de esta base
-				choPersonas.add(rs.getInt("idPersona") + "-" +
-						rs.getString("nombrePersona") + "-" +
-						rs.getString("apellidosPersona")+"-" + 
-						rs.getString("dniPersona"));
+				choProducto.add(rs.getInt("idProducto") + "-" +
+						rs.getString("tipoProducto") + "-" +
+						rs.getString("cantidadProducto")+"-" + 
+						rs.getString("ivaProducto"));
+
 			}
 		}
 		catch(Exception e){}
@@ -104,17 +101,19 @@ public class ModificacionPersona implements WindowListener, ActionListener
 		if(evento.getSource().equals(btnEditar))
 		{
 			// Validación
-			if ((choPersonas.getSelectedItem().equals("Seleccionar una persona...")))
+			if ((choProducto.getSelectedItem().equals("Seleccionar una producto...")))
 			{
-				lblMensaje.setText("Debes seleccionar una persona");
-				dlgModificar.setVisible(false);
+				//mensaje de error si intentas seleccionar persona
+				lblMensaje.setText("Debes seleccionar una producto");
 				mostrarDialogo();
 			}
+
 			else
 			{
 				mostrarModificar();
 			}
 		}
+
 		else if(evento.getSource().equals(btnCancelar))
 		{
 			ventana.setVisible(false);
@@ -123,27 +122,27 @@ public class ModificacionPersona implements WindowListener, ActionListener
 		{
 			bd.conectar(); 
 			// Coger los datos
-			String nombreNuevo = txtNombre.getText();
-			String apellidosNuevo = txtApellidos.getText();
-			String dniNuevo = txtDni.getText();
-			String domicilioNuevo = txtDomicilio.getText();
-			String telefonooNuevo = txtTelefono.getText();
-			String emailNuevo = txtEmail.getText();
+			//Coger los datos del formulario:
+			String tipo = txtTipo.getText();
+			String cantidad = txtCantidad.getText();
+			String iva = txtIVA.getText();
+			String venta = txtPrecioVenta.getText();
+			String compra = txtCompra.getText();
 			//Ejecutamos comando modificar "Update"
-			String sentencia = "UPDATE estetica_pr.personas SET nombrePersona = '"+ nombreNuevo + 
-					"', apellidosPersona = '" + apellidosNuevo +
-					"', dniPersona = '" + dniNuevo +
-					"', domicilioPersona= '" + domicilioNuevo +
-					"', telefonoPersona= '" + telefonooNuevo + 
-					"', emailPersona = '" + emailNuevo + 
-					"' WHERE idPersona = " + idPersona;
-
+			String sentencia = "UPDATE estetica_pr.productos SET tipoProducto = '"+ tipo + 
+					"', cantidadProducto = '" + cantidad +
+					"', ivaProducto = '" + iva +
+					"', precioVentaProducto= '" + venta +
+					"', precioCompraProducto= '" + compra + 
+					"' WHERE idProducto = " + idProducto;
+			System.out.println(sentencia);
 			if ((bd.ModificacionPersona(sentencia)==0)) 
 			{
 				// Todo bien
 				lblMensaje.setText("Modificación correcta");
-				dlgModificar.setVisible(false);
 				mostrarDialogo();
+				dlgModificar.setVisible(false);
+
 			}
 			else
 			{
@@ -153,7 +152,8 @@ public class ModificacionPersona implements WindowListener, ActionListener
 			}
 			//Desconectar la base
 			bd.desconectar();
-			
+			rellenarChoiceProductos();
+
 		}
 	}
 	private void mostrarModificar()
@@ -161,35 +161,32 @@ public class ModificacionPersona implements WindowListener, ActionListener
 		//Montar la ventana Modificacion
 		dlgModificar.setLayout(new FlowLayout());
 		//damos tamaño al diálogo
-		dlgModificar.setSize(215,305); //ancho , alto		
+		dlgModificar.setSize(270,240); //ancho , alto		
 		//Crear una sentencia
-		String[] seleccionado = choPersonas.getSelectedItem().split("-");
-		idPersona = Integer.parseInt(seleccionado[0]);
+		String[] seleccionado = choProducto.getSelectedItem().split("-");
+		idProducto = Integer.parseInt(seleccionado[0]);
 		try
 		{
 			//rellena el choice seleccionar
-			rs = bd.buscarPersona(bd.conectar(), "SELECT * FROM personas WHERE idPersona = " + idPersona);		
+			rs = bd.buscarProducto(bd.conectar(), "SELECT * FROM productos WHERE idProducto = " + idProducto);		
 			rs.next();
 			//mostrar la persona seleccionada a modificar
 			dlgModificar.add(lblModificar);
-			dlgModificar.add(lblNombre);
-			txtNombre.setText(rs.getString("nombrePersona"));
-			dlgModificar.add(txtNombre);
-			dlgModificar.add(lblApellidos);
-			txtApellidos.setText(rs.getString("apellidosPersona"));
-			dlgModificar.add(txtApellidos);
-			dlgModificar.add(lblDni);
-			txtDni.setText(rs.getString("dniPersona"));
-			dlgModificar.add(txtDni);
-			dlgModificar.add(lblDomicilio);
-			txtDomicilio.setText(rs.getString("domicilioPersona"));
-			dlgModificar.add(txtDomicilio);
-			dlgModificar.add(lblTelefono);
-			txtTelefono.setText(rs.getString("telefonoPersona"));
-			dlgModificar.add(txtTelefono);
-			dlgModificar.add(lblEmail);
-			txtEmail.setText(rs.getString("emailPersona"));
-			dlgModificar.add(txtEmail);
+			dlgModificar.add(lblTipo);
+			txtTipo.setText(rs.getString("tipoProducto"));
+			dlgModificar.add(txtTipo);
+			dlgModificar.add(lblCantidad);
+			txtCantidad.setText(rs.getString("cantidadProducto"));
+			dlgModificar.add(txtCantidad);
+			dlgModificar.add(lblIVA);
+			txtIVA.setText(rs.getString("ivaProducto"));
+			dlgModificar.add(txtIVA);
+			dlgModificar.add(lblPrecioVenta);
+			txtPrecioVenta.setText(rs.getString("precioVentaProducto"));
+			dlgModificar.add(txtPrecioVenta);
+			dlgModificar.add(lblCompra);
+			txtCompra.setText(rs.getString("precioCompraProducto"));
+			dlgModificar.add(txtCompra);
 			//Mostrar botones
 			dlgModificar.add(btnModificar);
 			dlgModificar.add(btnCancelar);
@@ -199,9 +196,9 @@ public class ModificacionPersona implements WindowListener, ActionListener
 		dlgModificar.addWindowListener(this);
 		btnModificar.addActionListener(this);
 		btnCancelar.addActionListener(this);
-		
+
 		//mostrar en pantalla
-		dlgModificar.setResizable(false);
+		//dlgModificar.setResizable(false);
 		dlgModificar.setLocationRelativeTo(null);
 		dlgModificar.setVisible(true);
 	}
@@ -212,7 +209,7 @@ public class ModificacionPersona implements WindowListener, ActionListener
 		dlgMensaje.setSize(240,160);
 		dlgMensaje.addWindowListener(this);
 		dlgMensaje.add(lblMensaje);
-		
+
 		//Mostramos el diálogo
 		dlgMensaje.setResizable(false);
 		dlgMensaje.setLocationRelativeTo(null);
@@ -243,6 +240,7 @@ public class ModificacionPersona implements WindowListener, ActionListener
 		{
 			ventana.setVisible(false);
 		}
+
 	}
 
 	@Override

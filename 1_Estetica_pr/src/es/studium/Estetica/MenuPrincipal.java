@@ -32,11 +32,11 @@ public class MenuPrincipal implements WindowListener, ActionListener
 	MenuItem mniBajaClientes = new MenuItem("Eliminar cliente");
 	MenuItem mniModificacionClientes= new MenuItem("Modificar cliente");
 
-	Menu mnuCompras = new Menu ("compras");
-	MenuItem mniConsultaCompras = new MenuItem("Listado de compra");
-	MenuItem mniAltaCompras = new MenuItem("Nuevo Producto producto");
+	Menu mnuCompras = new Menu ("Compras");
+	MenuItem mniConsultaCompras = new MenuItem("Listado de compras");
+	MenuItem mniAltaCompras = new MenuItem("Nueva compra");
 	MenuItem mniBajaCompras = new MenuItem("Eliminar compra");
-	MenuItem mniModificacionCompras= new MenuItem("Modificar producto");
+	MenuItem mniModificacionCompras= new MenuItem("Modificar compra");
 
 	public MenuPrincipal(int tipo)
 	{
@@ -139,6 +139,38 @@ public class MenuPrincipal implements WindowListener, ActionListener
 		else if(evento.getSource().equals(mniModificacionClientes))
 		{
 		new ModificacionClientes();
+		}
+		else if(evento.getSource().equals(mniAltaProductos))
+		{
+		new AltaProductos();
+		}
+		else if(evento.getSource().equals(mniConsultaProductos))
+		{
+		new ConsultaProductos();
+		}
+		else if(evento.getSource().equals(mniBajaProductos))
+		{
+		new BajaProductos();
+		}
+		else if(evento.getSource().equals(mniModificacionProductos))
+		{
+		new ModificacionProductos();
+		}
+		else if(evento.getSource().equals(mniConsultaCompras))
+		{
+		new ConsultaCompras();
+		}
+		else if(evento.getSource().equals(mniAltaCompras))
+		{
+		new AltaCompras();
+		}
+		else if(evento.getSource().equals(mniBajaCompras))
+		{
+		new BajaCompras();
+		}
+		else if (evento.getSource().equals(mniModificacionCompras))
+		{
+		new ModificacionCompras();
 		}
 	}
 

@@ -21,8 +21,8 @@ public class Login implements WindowListener, ActionListener
 	//objetos para indicar usuario y clave del login
 	Label lblUsuario = new Label("Usuario");
 	Label lblClave = new Label("Clave");
-	TextField txtUsuario = new TextField(10);	
-	TextField txtClave = new TextField(10);	
+	TextField txtUsuario = new TextField("administrador");	
+	TextField txtClave = new TextField("Studium");	
 	Button btnAceptar = new Button("Aceptar");
 	Button btnCancelar = new Button("Cancelar");
 

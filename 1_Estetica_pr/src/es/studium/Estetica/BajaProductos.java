@@ -11,11 +11,11 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.sql.ResultSet;
 
-public class BajaPersona implements WindowListener, ActionListener
+public class BajaProductos implements WindowListener, ActionListener
 {
-	Frame ventana = new Frame ("Eliminar persona");
-	Label lblCabecera = new Label ("Elegir persona");
-	Choice choPersonas = new Choice();
+	Frame ventana = new Frame ("Eliminar producto");
+	Label lblCabecera = new Label ("Elegir producto");
+	Choice choProducto = new Choice();
 	Button btnBorrar = new Button("Borrar");
 
 	Dialog dlgConfirmacion = new Dialog(ventana,"Confirmación", true);
@@ -28,11 +28,11 @@ public class BajaPersona implements WindowListener, ActionListener
 
 	BaseDatos bd = new BaseDatos();
 	ResultSet rs = null;
-	int idPersonaBorrar = 0;
+	int idProductoBorrar = 0;
 
-	//Constructor
-	public BajaPersona()
+	public BajaProductos()
 	{
+
 		//Listener
 		ventana.addWindowListener(this);
 		btnBorrar.addActionListener(this);
@@ -45,30 +45,30 @@ public class BajaPersona implements WindowListener, ActionListener
 
 
 		//metodo rellenar choice
-		rellenarChoicePersonas();
-		ventana.add(choPersonas);
+		rellenarChoiceProductos();
+		ventana.add(choProducto);
 		ventana.add(btnBorrar);
 		//mostramos pantalla
 		ventana.setLocationRelativeTo(null);
 		ventana.setVisible(true);
 	}
-	private void rellenarChoicePersonas()
+	private void rellenarChoiceProductos()
 	{
 		// Rellenar el Choice
-		choPersonas.removeAll();//validación
-		choPersonas.add("Seleccionar una persona...");
+		choProducto.removeAll();//validación
+		choProducto.add("Seleccionar una producto...");
 		// Conectar BD
 		bd.conectar();
 		//Sacar a los clientes de la tabla 
-		rs=bd.rellenarPersonas(bd.conectar());
+		rs=bd.rellenarProducto(bd.conectar());
 		try
 		{
 			while (rs.next())
 			{
-				choPersonas.add(rs.getInt("idPersona") + "-" +
-						rs.getString("nombrePersona") + "-" +
-						rs.getString("apellidosPersona")+"-" + 
-						rs.getString("dniPersona"));
+				choProducto.add(rs.getInt("idProducto") + "-" +
+						rs.getString("tipoProducto") + "-" +
+						rs.getString("cantidadProducto")+"-" + 
+						rs.getString("ivaProducto"));
 
 			}
 		}
@@ -76,15 +76,18 @@ public class BajaPersona implements WindowListener, ActionListener
 		//Desconectar la base de datos
 		bd.desconectar();
 	}
+
+	@Override
 	public void actionPerformed(ActionEvent evento)
-	{		//si seleccionamos boton borrar
+	{
+		//si seleccionamos boton borrar
 		if (evento.getSource().equals(btnBorrar))
 		{
 			//si intentamos borrar "Seleccionarpersona
-			if ((choPersonas.getSelectedItem().equals("Seleccionar una persona...")))
+			if ((choProducto.getSelectedItem().equals("Seleccionar una producto...")))
 			{
 				//mensaje de error si intentas seleccionar persona
-				lblMensaje.setText("Debes seleccionar una persona");
+				lblMensaje.setText("Debes seleccionar una producto");
 				mostrarMensaje();
 			}
 			else
@@ -103,8 +106,8 @@ public class BajaPersona implements WindowListener, ActionListener
 			//Al pulsar botón si conecta con la base de datos
 			bd.conectar();
 			//cadena para coger los datos 
-			String[] array = choPersonas.getSelectedItem().split("-");
-			int resultado = bd.BajaPersona(Integer.parseInt(array[0]));
+			String[] array = choProducto.getSelectedItem().split("-");
+			int resultado = bd.BajaProducto(Integer.parseInt(array[0]));
 			if (resultado == 0)
 			{
 				//si todo sale bien mensaje de correcto
@@ -122,7 +125,7 @@ public class BajaPersona implements WindowListener, ActionListener
 		}
 		//Desconectar de la base 		
 		bd.desconectar();
-		rellenarChoicePersonas();
+		rellenarChoiceProductos();
 	}
 	private void mostrarMensaje()
 	{
@@ -148,18 +151,21 @@ public class BajaPersona implements WindowListener, ActionListener
 		dlgConfirmacion.setLayout(new FlowLayout());
 		dlgConfirmacion.setSize(400,100);
 		dlgConfirmacion.add(lblConfirmacion);
-		lblConfirmacion.setText("¿Está seguro de borrar a " + choPersonas.getSelectedItem()+ "?");
+		lblConfirmacion.setText("¿Está seguro de borrar a " + choProducto.getSelectedItem()+ "?");
 		dlgConfirmacion.add(btnSi);
 		dlgConfirmacion.add(btnNo);
 		//Mostramos la ventana
 		dlgConfirmacion.setLocationRelativeTo(null);
 		dlgConfirmacion.setVisible(true);
 	}
+
 	@Override
 	public void windowOpened(WindowEvent e)
 	{
-		// TODO Auto-generated method stub		
+		// TODO Auto-generated method stub
+
 	}
+
 	@Override
 	public void windowClosing(WindowEvent e)
 	{
@@ -177,29 +183,39 @@ public class BajaPersona implements WindowListener, ActionListener
 			ventana.setVisible(false);
 		}
 	}
+
 	@Override
 	public void windowClosed(WindowEvent e)
 	{
-		// TODO Auto-generated method stub		
+		// TODO Auto-generated method stub
+
 	}
+
 	@Override
 	public void windowIconified(WindowEvent e)
 	{
-		// TODO Auto-generated method stub		
+		// TODO Auto-generated method stub
+
 	}
+
 	@Override
 	public void windowDeiconified(WindowEvent e)
 	{
-		// TODO Auto-generated method stu		
+		// TODO Auto-generated method stub
+
 	}
+
 	@Override
 	public void windowActivated(WindowEvent e)
 	{
-		// TODO Auto-generated method stub		
+		// TODO Auto-generated method stub
+
 	}
+
 	@Override
 	public void windowDeactivated(WindowEvent e)
 	{
-		// TODO Auto-generated method stub		
+		// TODO Auto-generated method stub
+
 	}
 }
