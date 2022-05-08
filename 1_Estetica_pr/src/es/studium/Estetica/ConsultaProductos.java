@@ -14,84 +14,84 @@ import java.awt.event.WindowListener;
 public class ConsultaProductos implements WindowListener, ActionListener
 {
 	//Creamos los objetos necesarios para esta ventana
-		Frame ventana = new Frame ("Consulta de Productos");
-		MenuItem mniConsultaProductos = new MenuItem("Consulta");
-		TextArea txtProductos = new TextArea(5,15);
-		Label lblProductos = new Label("PRODUCTOS");
-		Button btnPDF =  new Button ("Exportar a PDF");
-		BaseDatos bd = new BaseDatos();
-		
-		public ConsultaProductos()
-		{
+	Frame ventana = new Frame ("Consulta de Productos");
+	MenuItem mniConsultaProductos = new MenuItem("Consulta");
+	TextArea txtProductos = new TextArea(5,15);
+	Label lblProductos = new Label("PRODUCTOS");
+	Button btnPDF =  new Button ("Exportar a PDF");
+	BaseDatos bd = new BaseDatos();
 
-			//Configuramos la pantalla y añadimos los Listeners
-			ventana.setLayout(new FlowLayout());
-			ventana.setSize(250,200);//aplicamos ancho y altura
-			ventana.addWindowListener(this);
-			// Conectar con la BD
-			bd.conectar();
-			ventana.add(txtProductos);
-			txtProductos.setText(bd.ConsultaProductos());
-			btnPDF.addActionListener(this);
-			ventana.add(btnPDF);
-			bd.desconectar();
-			
-			ventana.setResizable(false);
-			ventana.setLocationRelativeTo(null);
-			ventana.setVisible(true);
-		}
+	public ConsultaProductos()
+	{
 
-		@Override
-		public void actionPerformed(ActionEvent e)
-		{
-			// Tercer trimestre
-			
-		}
+		//Configuramos la pantalla y añadimos los Listeners
+		ventana.setLayout(new FlowLayout());
+		ventana.setSize(250,200);//aplicamos ancho y altura
+		ventana.addWindowListener(this);
+		// Conectar con la BD
+		bd.conectar();
+		ventana.add(txtProductos);
+		txtProductos.setText(bd.ConsultaProductos());
+		btnPDF.addActionListener(this);
+		ventana.add(btnPDF);
+		bd.desconectar();
 
-		@Override
-		public void windowOpened(WindowEvent e)
-		{}
+		ventana.setResizable(false);
+		ventana.setLocationRelativeTo(null);
+		ventana.setVisible(true);
+	}
 
-		@Override
-		public void windowClosing(WindowEvent e)
-		{
-			//Cerranmos las ventanas
-			ventana.setVisible(false);
-			
-		}
+	@Override
+	public void actionPerformed(ActionEvent e)
+	{
+		// Tercer trimestre
 
-		@Override
-		public void windowClosed(WindowEvent e)
-		{
-			// TODO Auto-generated method stub
-			
-		}
+	}
 
-		@Override
-		public void windowIconified(WindowEvent e)
-		{
-			// TODO Auto-generated method stub
-			
-		}
+	@Override
+	public void windowOpened(WindowEvent e)
+	{}
 
-		@Override
-		public void windowDeiconified(WindowEvent e)
-		{
-			// TODO Auto-generated method stub
-			
-		}
+	@Override
+	public void windowClosing(WindowEvent e)
+	{
+		//Cerranmos las ventanas
+		ventana.setVisible(false);
 
-		@Override
-		public void windowActivated(WindowEvent e)
-		{
-			// TODO Auto-generated method stub
-			
-		}
+	}
 
-		@Override
-		public void windowDeactivated(WindowEvent e)
-		{
-			// TODO Auto-generated method stub
-			
-		}
+	@Override
+	public void windowClosed(WindowEvent e)
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e)
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e)
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowActivated(WindowEvent e)
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e)
+	{
+		// TODO Auto-generated method stub
+
+	}
 }

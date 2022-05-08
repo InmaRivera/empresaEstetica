@@ -13,7 +13,7 @@ import java.awt.event.WindowListener;
 
 public class ConsultaCompras  implements WindowListener, ActionListener
 {
-	//objetos necesarios para la ventana de consulta clientes
+	//objetos necesarios para la ventana de consulta compras
 	Frame ventana = new Frame ("Consulta compras");
 	MenuItem mniConsultaCompras = new MenuItem("Consulta");
 	TextArea txtCompras = new TextArea(5,15);
@@ -23,35 +23,35 @@ public class ConsultaCompras  implements WindowListener, ActionListener
 	public ConsultaCompras()
 	{
 		//Configuramos la ventana
-				ventana.setLayout(new FlowLayout());
-				ventana.setSize(210,200);
-				ventana.add(lblCompras);
-				ventana.addWindowListener(this);
-				// Conectar con la BD
-				bd.conectar();
-				
-				ventana.add(txtCompras);
-				txtCompras.setText(bd.ConsultaCompras());
-				btnPDF.addActionListener(this);
-				ventana.add(btnPDF);
-				bd.desconectar();
+		ventana.setLayout(new FlowLayout());
+		ventana.setSize(210,200);
+		ventana.add(lblCompras);
+		ventana.addWindowListener(this);
+		// Conectar con la BD
+		bd.conectar();
 
-				//Mostramos la ventana
-				ventana.setResizable(false);
-				ventana.setLocationRelativeTo(null);
-				ventana.setVisible(true);
+		ventana.add(txtCompras);
+		txtCompras.setText(bd.ConsultaCompras());
+		btnPDF.addActionListener(this);
+		ventana.add(btnPDF);
+		bd.desconectar();
+
+		//Mostramos la ventana
+		ventana.setResizable(false);
+		ventana.setLocationRelativeTo(null);
+		ventana.setVisible(true);
 	}
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{
 		// TODO Auto-generated method stub
-		
+
 	}
 	@Override
 	public void windowOpened(WindowEvent e)
 	{
 		// TODO Auto-generated method stub
-		
+
 	}
 	@Override
 	public void windowClosing(WindowEvent e)
@@ -62,31 +62,31 @@ public class ConsultaCompras  implements WindowListener, ActionListener
 	public void windowClosed(WindowEvent e)
 	{
 		// TODO Auto-generated method stub
-		
+
 	}
 	@Override
 	public void windowIconified(WindowEvent e)
 	{
 		// TODO Auto-generated method stub
-		
+
 	}
 	@Override
 	public void windowDeiconified(WindowEvent e)
 	{
 		// TODO Auto-generated method stub
-		
+
 	}
 	@Override
 	public void windowActivated(WindowEvent e)
 	{
 		// TODO Auto-generated method stub
-		
+
 	}
 	@Override
 	public void windowDeactivated(WindowEvent e)
 	{
 		// TODO Auto-generated method stub
-		
+
 	}
-	
+
 }

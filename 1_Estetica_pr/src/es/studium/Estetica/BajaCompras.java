@@ -57,7 +57,7 @@ public class BajaCompras implements WindowListener, ActionListener
 		choCompras.add("Seleccione una compra...");
 		// Conectar BD
 		bd.conectar();
-		//Sacar a los clientes de la tabla 
+		//Sacar los datos de compra de la tabla 
 		rs=bd.elegirCompra(bd.conectar());
 		try
 		{
@@ -78,22 +78,22 @@ public class BajaCompras implements WindowListener, ActionListener
 		//si seleccionamos boton borrar
 		if (evento.getSource().equals(btnBorrar))
 		{
-			//si intentamos borrar "Seleccionarpersona
+			//si intentamos borrar "Seleccionar compra" mensaje de aviso:
 			if ((choCompras.getSelectedItem().equals("Seleccione una compra...")))
 			{
-				//mensaje de error si intentas seleccionar persona
+				//mensaje de error si intentas seleccionar compra
 				lblMensaje.setText("Debes seleccionar una compra");
 				mostrarMensaje();
 			}
 			else
 			{
-				//sino muestra el dialogo para elegir persona
+				//sino muestra el dialogo para elegir compra
 				mostrarDialogo();	
 			}
 		}
 		else if (evento.getSource().equals(btnNo))
 		{
-			//boton no vuelve a la ventana elegir persona
+			//botón no vuelve a la ventana elegir compra
 			dlgConfirmacion.setVisible(false);
 		}
 		else if (evento.getSource().equals(btnSi))
@@ -129,7 +129,6 @@ public class BajaCompras implements WindowListener, ActionListener
 		dlgMensaje.addWindowListener(this);
 		dlgMensaje.add(lblMensaje);
 
-		//lblMensaje.setText("Error");
 		dlgMensaje.setLocationRelativeTo(null);
 		dlgMensaje.setVisible(true);
 	}

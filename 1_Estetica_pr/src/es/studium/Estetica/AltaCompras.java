@@ -124,14 +124,14 @@ public class AltaCompras implements WindowListener, ActionListener
 				lblMensaje.setText("Debe seleccionar un cliente");
 
 			}
-			//si intentamos borrar "Seleccionar persona" nos avisará
+			//si intentamos borrar "Seleccionar producto" nos avisará
 			else if (choProducto.getSelectedItem().equals("Seleccionar una producto...          "))
 			{
-				//mensaje de error si intentas seleccionar persona
+				//mensaje de error si intentas seleccionar producto
 				lblMensaje.setText("Debes seleccionar una producto");
 
 			}
-			//Si todo está bien instrucción para insertar al cliente
+			//Si todo está bien instrucción para insertar datos en la tabla compras
 			else
 			{
 				String[] seleccionado = choPersonas.getSelectedItem().split("-");

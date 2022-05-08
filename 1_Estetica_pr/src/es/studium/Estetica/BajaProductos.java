@@ -56,7 +56,7 @@ public class BajaProductos implements WindowListener, ActionListener
 	{
 		// Rellenar el Choice
 		choProducto.removeAll();//validación
-		choProducto.add("Seleccionar una producto...");
+		choProducto.add("Seleccionar un producto...");
 		// Conectar BD
 		bd.conectar();
 		//Sacar a los clientes de la tabla 
@@ -83,22 +83,22 @@ public class BajaProductos implements WindowListener, ActionListener
 		//si seleccionamos boton borrar
 		if (evento.getSource().equals(btnBorrar))
 		{
-			//si intentamos borrar "Seleccionarpersona
-			if ((choProducto.getSelectedItem().equals("Seleccionar una producto...")))
+			//si intentamos borrar "Seleccionar producto" mensaje de aviso:
+			if ((choProducto.getSelectedItem().equals("Seleccionar un producto...")))
 			{
-				//mensaje de error si intentas seleccionar persona
-				lblMensaje.setText("Debes seleccionar una producto");
+				//mensaje de error si intentas seleccionar producto
+				lblMensaje.setText("Debes seleccionar un producto");
 				mostrarMensaje();
 			}
 			else
 			{
-				//sino muestra el dialogo para elegir persona
+				//sino muestra el dialogo para elegir producto
 				mostrarDialogo();	
 			}
 		}
 		else if (evento.getSource().equals(btnNo))
 		{
-			//boton no vuelve a la ventana elegir persona
+			//boton "no" vuelve a la ventana elegir producto
 			dlgConfirmacion.setVisible(false);
 		}
 		else if (evento.getSource().equals(btnSi))

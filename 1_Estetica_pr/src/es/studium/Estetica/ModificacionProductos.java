@@ -30,7 +30,6 @@ public class ModificacionProductos implements WindowListener, ActionListener
 	Button btnModificar = new Button("Modificar");
 	Button btnCancelar = new Button("Cancelar");
 
-	//Frame ventanaModificacion = new Frame ("Modificar persona");
 	TextField txtTipo = new TextField(10);
 	Label lblTipo = new Label("Nombre producto    ");
 	TextField txtCantidad = new TextField(10);
@@ -52,7 +51,6 @@ public class ModificacionProductos implements WindowListener, ActionListener
 		//Listener
 		ventana.addWindowListener(this);
 		btnEditar.addActionListener(this);
-
 
 		//Pantalla
 		ventana.setLayout(new FlowLayout());
@@ -77,7 +75,7 @@ public class ModificacionProductos implements WindowListener, ActionListener
 		choProducto.add("Seleccionar una producto...");
 		// Conectar BD
 		bd.conectar();
-		//Sacar a los clientes de la tabla 
+		//Sacar  los productos de la tabla 
 		rs=bd.rellenarProducto(bd.conectar());
 		try
 		{
@@ -103,7 +101,7 @@ public class ModificacionProductos implements WindowListener, ActionListener
 			// Validación
 			if ((choProducto.getSelectedItem().equals("Seleccionar una producto...")))
 			{
-				//mensaje de error si intentas seleccionar persona
+				//mensaje de error si intentas seleccionar producto
 				lblMensaje.setText("Debes seleccionar una producto");
 				mostrarDialogo();
 			}
@@ -170,7 +168,7 @@ public class ModificacionProductos implements WindowListener, ActionListener
 			//rellena el choice seleccionar
 			rs = bd.buscarProducto(bd.conectar(), "SELECT * FROM productos WHERE idProducto = " + idProducto);		
 			rs.next();
-			//mostrar la persona seleccionada a modificar
+			//mostrar el producto seleccionado a modificar
 			dlgModificar.add(lblModificar);
 			dlgModificar.add(lblTipo);
 			txtTipo.setText(rs.getString("tipoProducto"));
@@ -198,7 +196,7 @@ public class ModificacionProductos implements WindowListener, ActionListener
 		btnCancelar.addActionListener(this);
 
 		//mostrar en pantalla
-		//dlgModificar.setResizable(false);
+		dlgModificar.setResizable(false);
 		dlgModificar.setLocationRelativeTo(null);
 		dlgModificar.setVisible(true);
 	}

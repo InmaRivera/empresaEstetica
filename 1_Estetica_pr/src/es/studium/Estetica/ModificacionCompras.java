@@ -14,7 +14,7 @@ import java.sql.ResultSet;
 
 public class ModificacionCompras implements WindowListener, ActionListener
 {
-	//Creamos los objetos necesarios para la clase de Baja cliente
+	//Creamos los objetos necesarios para la clase Modificación 
 	//Creación de objetos
 	//ventana seleccion
 	Frame ventana = new Frame ("Modificar compra");
@@ -46,15 +46,20 @@ public class ModificacionCompras implements WindowListener, ActionListener
 	ResultSet rs = null;
 	public ModificacionCompras()
 	{
-		//Listener
-		ventana.addWindowListener(this);
-		btnEditar.addActionListener(this);
 
-		
+		//Pantalla
+		ventana.setLayout(new FlowLayout());
+		ventana.setSize(300,200);
+		ventana.setResizable(false);
+		ventana.add(lblCabecera);
 		//Rellenar choice
 		rellenarChoiceCompra();
 		rellenarChoiceProductos();
 		rellenarChoiceClientes();
+		//Listener
+		ventana.addWindowListener(this);
+		btnEditar.addActionListener(this);
+
 		ventana.add(choCompras);
 		ventana.add(btnEditar);
 		//Mostramos ventana
@@ -64,16 +69,12 @@ public class ModificacionCompras implements WindowListener, ActionListener
 
 	private void rellenarChoiceCompra()
 	{
-		//Pantalla
-		ventana.setLayout(new FlowLayout());
-		ventana.setSize(300,200);
-		ventana.setResizable(false);
-		ventana.add(lblCabecera);
 		// Rellenar el Choice
+		//choCompras.removeAll();
 		choCompras.add("Seleccionar una compra...");
 		// Conectar BD
 		bd.conectar();
-		//Sacar a los clientes de la tabla 
+		//Sacar los datos de compra 
 		rs=bd.elegirCompra(bd.conectar());
 		try
 		{
@@ -85,9 +86,6 @@ public class ModificacionCompras implements WindowListener, ActionListener
 			}
 		}
 		catch(Exception e){}
-
-		//Sacar los datos de la tabla personas
-		// Registro a registro, meteros en el choice
 		//Desconectar la base de datos
 		bd.desconectar();
 	}
@@ -98,7 +96,7 @@ public class ModificacionCompras implements WindowListener, ActionListener
 		//Si clicamos en Editar
 		if(evento.getSource().equals(btnEditar))
 		{
-			//si intentamos borrar "Seleccionarpersona
+			//si intentamos borrar "Seleccionar una compra" mostramos mensaje de error:
 			if (choCompras.getSelectedItem().equals("Seleccionar una compra..."))
 			{
 				//mensaje de error si intentas seleccionar persona
@@ -107,16 +105,16 @@ public class ModificacionCompras implements WindowListener, ActionListener
 			}
 			else
 			{
-				//sino muestra el dialogo para elegir persona
+				//sino muestra el dialogo para elegir compra
 				mostrarModificar();	
 			}
 		}
-		//Boton cancelar muestra ventana principañ
+		//Botón cancelar muestra ventana principal
 		else if(evento.getSource().equals(btnCancelar))
 		{
 			ventana.setVisible(false);
 		}
-		//boton modificar si todo va bien indicamos qué hacer
+		//Botón modificar si todo va bien indicamos qué hacer
 		//modifica al cliente con la siguiente instrucción
 		else if(evento.getSource().equals(btnModificar))
 		{
@@ -126,10 +124,10 @@ public class ModificacionCompras implements WindowListener, ActionListener
 				lblMensaje.setText("Debe seleccionar un cliente");
 				mostrarDialogo();
 			}
-			//si intentamos borrar "Seleccionar persona" nos avisará
+			//si intentamos borrar "Seleccionar producto" nos avisará
 			else if (choProducto.getSelectedItem().equals("Seleccionar una producto...          "))
 			{
-				//mensaje de error si intentas seleccionar persona
+				//mensaje de aviso si intentas seleccionar producto
 				lblMensaje.setText("Debes seleccionar una producto");
 				mostrarDialogo();
 
@@ -142,7 +140,7 @@ public class ModificacionCompras implements WindowListener, ActionListener
 			if(evento.getSource().equals(btnModificar))
 			{
 				bd.conectar(); 
-				// Coger los datos
+				// Coger los datos de personas, productos y compras
 				String[] seleccionado = choPersonas.getSelectedItem().split("-");
 				int idClienteFK = Integer.parseInt(seleccionado[0]);
 				String[] seleccionado1 = choProducto.getSelectedItem().split("-");
@@ -153,9 +151,6 @@ public class ModificacionCompras implements WindowListener, ActionListener
 				String sentencia = "UPDATE estetica_pr.compras SET idClienteFK = '"+ idClienteFK + 
 						"', idProductoFK = '" + idProductoFK +
 						"' WHERE idCompra = " + idCompra ;	
-
-				//UPDATE `estetica_pr`.`compras` SET `idClienteFK`
-				//= '7', `idProductoFK` = '12' WHERE (`idCompra` = '12');
 				System.out.println(sentencia);
 
 				if ((bd.ModificacionCompra(sentencia)==0)) 
@@ -204,7 +199,7 @@ public class ModificacionCompras implements WindowListener, ActionListener
 		choProducto.add("Seleccionar una producto...          ");
 		// Conectar BD
 		bd.conectar();
-		//Sacar a los clientes de la tabla 
+		//Sacar a los productos de la tabla 
 		rs=bd.rellenarProducto(bd.conectar());
 		try
 		{
@@ -232,9 +227,9 @@ public class ModificacionCompras implements WindowListener, ActionListener
 			int idClienteFK = Integer.parseInt(seleccionado[0]);
 			String[] seleccionado1 = choProducto.getSelectedItem().split("-");
 			int idProductoFK = Integer.parseInt(seleccionado1[0]);
-			
+
 			rs = bd.buscarCompra(bd.conectar(), "SELECT * FROM compras WHERE idCompra= " + 
-			idClienteFK + idProductoFK);		
+					idClienteFK + idProductoFK);		
 			rs.next();
 		}
 		catch(Exception e){}
