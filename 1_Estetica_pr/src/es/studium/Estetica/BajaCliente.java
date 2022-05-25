@@ -30,10 +30,11 @@ public class BajaCliente implements WindowListener, ActionListener
 	BaseDatos bd = new BaseDatos();
 	ResultSet rs = null;
 	int idPersonaBorrar = 0;
-
+	int tipoUsuario;
 	//Constructor
-	public BajaCliente()
+	public BajaCliente(int tipoUsuario)
 	{
+		this.tipoUsuario=tipoUsuario;
 		//Listener
 		ventana.addWindowListener(this);
 		btnBorrar.addActionListener(this);
@@ -98,11 +99,13 @@ public class BajaCliente implements WindowListener, ActionListener
 		}
 		else if (evento.getSource().equals(btnSi))
 		{
+			
 			//Al pulsar botón si conecta con la base de datos
 			bd.conectar();
 			//cadena para coger los datos 
 			String[] array = choPersonas.getSelectedItem().split("-");
-			int resultado = bd.BajaCliente(Integer.parseInt(array[0]));
+			int resultado = bd.BajaCliente(Integer.parseInt(array[0]), tipoUsuario);
+	
 			if (resultado == 0)
 			{
 				//si todo sale bien mensaje de correcto

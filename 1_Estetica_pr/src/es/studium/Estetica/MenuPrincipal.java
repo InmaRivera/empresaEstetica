@@ -1,17 +1,19 @@
 package es.studium.Estetica;
 import java.awt.FlowLayout;
 import java.awt.Frame;
+import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.Menu;
 import java.awt.MenuBar;
 import java.awt.MenuItem;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
-
-public class MenuPrincipal implements WindowListener, ActionListener
+public class MenuPrincipal extends Frame implements WindowListener, ActionListener
 {
-	Frame ventana = new Frame("Menú Principal");
+	private static final long serialVersionUID = 1L;
 	MenuBar barraMenu = new MenuBar();
 
 	Menu mnuPersonas = new Menu ("Personas");
@@ -37,14 +39,19 @@ public class MenuPrincipal implements WindowListener, ActionListener
 	MenuItem mniAltaCompras = new MenuItem("Nueva compra");
 	MenuItem mniBajaCompras = new MenuItem("Eliminar compra");
 	MenuItem mniModificacionCompras= new MenuItem("Modificar compra");
-
+	
+	Image imagen;
+	// Declarar el objeto Toolkit para manejo de imágenes
+	Toolkit herramienta;
+	int tipoUsuario;
 	public MenuPrincipal(int tipo)
 	{
+		this.tipoUsuario = tipo;
 		//Configuración Pantalla
-		ventana.addWindowListener(this);
-		ventana.setSize(300, 220); // Tamaño: Ancho x Alto
-		ventana.setResizable(false); // No permitir redimensión
-		ventana.setLayout(new FlowLayout());
+		addWindowListener(this);
+		setSize(300, 220); // Tamaño: Ancho x Alto
+		setResizable(false); // No permitir redimensión
+		setLayout(new FlowLayout());
 		
 		//Listener y menús
 		if(tipo == 1)//Si se accede con usuario administrador se muestra estos ítems
@@ -98,94 +105,104 @@ public class MenuPrincipal implements WindowListener, ActionListener
 		mniConsultaPersonas.addActionListener(this);
 		mnuPersonas.add(mniConsultaPersonas);
 		barraMenu.add(mnuPersonas);
-
-		ventana.setMenuBar(barraMenu);
-		ventana.setLocationRelativeTo(null); // Centrar
-		ventana.setVisible(true);	
+		
+		setVisible(true);
+		herramienta = getToolkit();
+		// Especificar la ruta de la imagen
+		imagen = herramienta.getImage("img\\CentroEstetiCA.jpg");
+		setSize(299, 246); // En pixeles Width, Height. Ir probando y cambiando anchura y altura
+		setMenuBar(barraMenu);
+		setLocationRelativeTo(null); // Centrar
+			
 	}
-
 	@Override
 	public void actionPerformed(ActionEvent evento)
 	{
 		//Funcionalidad de los ítems
 		if(evento.getSource().equals(mniConsultaPersonas))
 		{
-		new ConsultaPersona();
+			new ConsultaPersona();
 		}
 		else if(evento.getSource().equals(mniAltaPersonas))
 		{
-		new AltaPersona();
+			new AltaPersona(tipoUsuario);
 		}
 		else if(evento.getSource().equals(mniBajaPersonas))
 		{
-		new BajaPersona();
+			new BajaPersona();
 		}
 		else if(evento.getSource().equals(mniModificacionPersonas))
 		{
-		new ModificacionPersona();
+			new ModificacionPersona();
 		}
 		else if(evento.getSource().equals(mniConsultaClientes))
 		{
-		new ConsultaCliente();
+		
+			new ConsultaCliente(tipoUsuario);
 		}
 		else if(evento.getSource().equals(mniAltaClientes))
 		{
-		new AltaCliente();
+			new AltaCliente(tipoUsuario);
 		}
 		else if(evento.getSource().equals(mniBajaClientes))
 		{
-		new BajaCliente();
+			new BajaCliente(tipoUsuario);
 		}
 		else if(evento.getSource().equals(mniModificacionClientes))
 		{
-		new ModificacionClientes();
+			new ModificacionClientes();
 		}
 		else if(evento.getSource().equals(mniAltaProductos))
 		{
-		new AltaProductos();
+			new AltaProductos();
 		}
 		else if(evento.getSource().equals(mniConsultaProductos))
 		{
-		new ConsultaProductos();
+			new ConsultaProductos();
 		}
 		else if(evento.getSource().equals(mniBajaProductos))
 		{
-		new BajaProductos();
+			new BajaProductos();
 		}
 		else if(evento.getSource().equals(mniModificacionProductos))
 		{
-		new ModificacionProductos();
+			new ModificacionProductos();
 		}
 		else if(evento.getSource().equals(mniConsultaCompras))
 		{
-		new ConsultaCompras();
+			new ConsultaCompras();
 		}
 		else if(evento.getSource().equals(mniAltaCompras))
 		{
-		new AltaCompras();
+			new AltaCompras();
 		}
 		else if(evento.getSource().equals(mniBajaCompras))
 		{
-		new BajaCompras();
+			new BajaCompras();
 		}
 		else if (evento.getSource().equals(mniModificacionCompras))
 		{
-		new ModificacionCompras();
+			new ModificacionCompras();
 		}
 	}
-
+	public void paint(Graphics g)
+	{
+		// Dibujar la imagen
+		g.drawImage(imagen,4,23,this);
+	}
 	@Override
 	public void windowOpened(WindowEvent e)
 	{
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	public void windowClosing(WindowEvent e)
 	{
+		BaseDatos bd = new BaseDatos();
+		bd.guardarLog(tipoUsuario, "logOut");
 		System.exit(0);		
-		
+
 	}
 
 	@Override

@@ -35,9 +35,10 @@ public class AltaPersona implements WindowListener, ActionListener
 	//para conectar con la clase base de datos
 	BaseDatos bd = new BaseDatos();
 	Connection connection = null;
-
-	public AltaPersona()
+	int tipoUsuario;
+	public AltaPersona(int tipoUsuario)
 	{
+		this.tipoUsuario=tipoUsuario;
 		//Configuración de la ventana
 		ventana.setLayout(new FlowLayout());
 		//tamaño ancho, alto
@@ -99,10 +100,13 @@ public class AltaPersona implements WindowListener, ActionListener
 			}
 			else
 			{
+				
 				// Crear la sentencia del insert
 				String sentencia = "INSERT INTO personas VALUES (null, '" ;
 				sentencia+=  nombre + "', '" + apellidos + "', '" + dni 
 						+"', '" + domicilio + "', '" + telefono + "', '" + email + "');";
+				//Registro de los login y documentación de lo realizado
+				bd.guardarLog(tipoUsuario, sentencia);
 				System.out.println(sentencia);
 
 				if((bd.AltaPersona(connection, sentencia))==0) 

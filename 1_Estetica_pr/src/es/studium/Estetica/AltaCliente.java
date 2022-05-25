@@ -32,9 +32,10 @@ public class AltaCliente implements WindowListener, ActionListener
 	BaseDatos bd = new BaseDatos();
 	Connection connection = null;
 	ResultSet rs = null;
-
-	public AltaCliente()
+	int tipoUsuario;
+	public AltaCliente(int tipoUsuario)
 	{
+		this.tipoUsuario=tipoUsuario;
 		//Configuración de la ventana y Listeners
 		ventana.setLayout(new FlowLayout());
 		ventana.setSize(320,200);
@@ -113,6 +114,7 @@ public class AltaCliente implements WindowListener, ActionListener
 				// Hacer el insert
 				String sentencia = "INSERT INTO clientes VALUES (null, '" ;
 				sentencia+=  descuento + "'," + "'" + idPersonaFK + "'" +");";
+				bd.guardarLog(tipoUsuario, sentencia);
 				System.out.println(sentencia);
 
 				if((bd.AltaCliente(connection, sentencia))==0) 

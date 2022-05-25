@@ -3,63 +3,62 @@ import java.awt.Button;
 import java.awt.Dialog;
 import java.awt.FlowLayout;
 import java.awt.Frame;
+import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.Label;
-import java.awt.Panel;
 import java.awt.TextField;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
-
-public class Login implements WindowListener, ActionListener
+public class Login extends Frame implements WindowListener, ActionListener
 {
+	private static final long serialVersionUID = 1L;
 	//creamos la ventana para el login
-	Frame ventana = new Frame();
-	Dialog dlgFeedback = new Dialog (ventana, "Mensaje", true);
+	
+	Dialog dlgFeedback = new Dialog (this, "Mensaje", true);
 	Label lblFeedback = new Label ("XXXXXXXXXXXXXXXXXXXXXXX");
 
 	//objetos para indicar usuario y clave del login
 	Label lblUsuario = new Label("Usuario");
-	Label lblClave = new Label("Clave");
+	Label lblClave = new Label("Clave   ");
 	TextField txtUsuario = new TextField("administrador");	
 	TextField txtClave = new TextField("Studium");	
 	Button btnAceptar = new Button("Aceptar");
 	Button btnCancelar = new Button("Cancelar");
 
-	Panel pnlPanel = new Panel();
 	BaseDatos bd = new BaseDatos();
-
+	Image imagen;
+	// Declarar el objeto Toolkit para manejo de imágenes
+	Toolkit herramienta;
 	Login ()
 	{
 		//Configuración ventana
-		ventana.setTitle("Login");// Título
-		ventana.addWindowListener(this);
-		ventana.setSize(230, 150); // Tamaño: Ancho x Alto
-		ventana.setResizable(false); // No permitir redimensión
-		ventana.setLayout(new FlowLayout()); // Distribución - Diseño
-		pnlPanel.setLayout(new FlowLayout());
-		pnlPanel.setSize(250,200);
+		setTitle("Login");// Título
+		addWindowListener(this);
+		setSize(210, 180); // Tamaño: Ancho x Alto
+		//setResizable(false); // No permitir redimensión
+		setLayout(new FlowLayout()); // Distribución - Diseño
 		dlgFeedback.addWindowListener(this);
 
-		ventana.add(lblUsuario);
-		//txtUsuario.addActionListener(this);
-		ventana.add(txtUsuario);
-		ventana.add(lblClave);
+		add(lblUsuario);
+		add(txtUsuario);
+		add(lblClave);
 		txtClave.setEchoChar('*');
-		//txtClave.addActionListener(this);
-		ventana.add(txtClave);
+		add(txtClave);
 
-		//pnlPanel.add(lblOlvide);
-		ventana.add(pnlPanel);
 		btnAceptar.addActionListener(this);
-		ventana.add(btnAceptar);
+		add(btnAceptar);
 		btnCancelar.addActionListener(this);
-		ventana.add(btnCancelar);
-		//ventana.add(btnRegistro);
-
-		ventana.setLocationRelativeTo(null); // Centrar
-		ventana.setVisible(true); // Mostrarla
-
+		add(btnCancelar);
+		
+		//herramienta toolkit
+		herramienta = getToolkit();
+		// Especificar la ruta de la imagen
+		imagen = herramienta.getImage("img\\seguridad.jpg");
+		setLocationRelativeTo(null); // Centrar
+		setVisible(true); // Mostrarla
 	}
 	public static void main(String[] args)
 	{
@@ -103,8 +102,9 @@ public class Login implements WindowListener, ActionListener
 			//Si credenciales correctas ---> mostrar menu principal
 			else
 			{
+				bd.guardarLog(resultado, "login");
 				new MenuPrincipal(resultado);
-				ventana.setVisible(false);//para que no aparezca la ventana de login cuando aparece Menu Principal
+				setVisible(false);//para que no aparezca la ventana de login cuando aparece Menu Principal
 			}
 		}
 		//Desconectar BD
@@ -123,6 +123,11 @@ public class Login implements WindowListener, ActionListener
 		dlgFeedback.setLocationRelativeTo(null);
 
 		dlgFeedback.setVisible(true);
+	}
+	public void paint(Graphics g)
+	{
+		// Dibujar la imagen
+		g.drawImage(imagen,4,23,this);
 	}
 	@Override
 	public void windowOpened(WindowEvent e)

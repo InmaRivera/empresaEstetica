@@ -1,9 +1,15 @@
 package es.studium.Estetica;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 public class BaseDatos 
 {
 	//conector BD
@@ -178,11 +184,12 @@ public class BaseDatos
 		return (rs);
 	}
 
-	public String ConsultaClientes()
+	public String ConsultaClientes(int tipoUsuario)
 	{
 		//Creamos la instrucción para ejecutar la sentencia en la consulta de clientes
 		String contenido = "";
-		sentencia = "SELECT * FROM clientes";
+		sentencia = "SELECT * FROM clientes join personas on idPersona =  idPersonaFK";
+		guardarLog(tipoUsuario, sentencia);
 		try
 		{
 			statement = connection.createStatement();
@@ -193,8 +200,12 @@ public class BaseDatos
 			while(resultSet.next())
 			{
 				contenido = contenido + (resultSet.getInt("idCliente")+
+						"-"+ resultSet.getString("nombrePersona")+
+						"-"+ resultSet.getString("apellidosPersona")+
 						"-"+ resultSet.getString("descuentoCliente")+
 						"-"+ resultSet.getString("idPersonaFK")+"\n");
+				guardarLog(tipoUsuario, contenido);
+				
 			}
 		}
 		catch (SQLException e){}
@@ -224,7 +235,7 @@ public class BaseDatos
 		return (resultado);
 	}
 
-	public int BajaCliente(int idCliente)
+	public int BajaCliente(int idCliente, int tipoUsuario)
 	{
 		//Creamos la instrucción con una sentencia para la baja del cliente 
 		int resultado = 0;
@@ -236,6 +247,8 @@ public class BaseDatos
 			statement = connection.createStatement();
 			//Ejecutamos el comando borrar
 			String sentencia = "DELETE FROM clientes WHERE idCliente = "+ idCliente;
+			//guardar movimientos en ficheroLog
+			guardarLog(tipoUsuario, sentencia);
 			statement.executeUpdate(sentencia);
 		}
 		catch (SQLException sqle)
@@ -505,6 +518,38 @@ public class BaseDatos
 				}
 				catch (SQLException sqle){}
 				return (rs);
+	}
+	public void guardarLog(int tipoUsuario, String mensaje)
+	{
+		String usuario;
+		if (tipoUsuario==0)
+		{
+			usuario = "basico";
+		}
+		else
+		{
+			usuario = "administrador";
+		}
+		Date fecha = new Date ();
+		String pattern = "dd//MM/YY HH:mm:SS";
+		SimpleDateFormat formatear = new SimpleDateFormat (pattern);
+	
+		try
+		{
+			FileWriter fw = new FileWriter("FicheroLog.txt", true);
+			BufferedWriter bw = new BufferedWriter(fw);
+			PrintWriter salida = new PrintWriter(bw);
+			salida.println("["+formatear.format(fecha)+ "]" + "["+ usuario +"]" +  "["+mensaje+"]");
+			System.out.println("["+formatear.format(fecha)+ "]"+ "["+ usuario +"]"  + "["+mensaje+"]");
+			salida.close();
+			bw.close();
+			fw.close();
+		}
+		catch (IOException ioe)
+		{
+			System.out.println(ioe.getMessage());
+		}
+		
 	}
 }
 	
