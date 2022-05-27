@@ -73,7 +73,8 @@ public class AltaCompras implements WindowListener, ActionListener
 			{
 				choPersonas.add(rs.getInt("idCliente") + "-" +
 						rs.getString("descuentoCliente") + "-" +
-						rs.getString("idPersonaFK"));
+						rs.getString("idPersonaFK") + "-" +
+						rs.getString("nombrePersona"));
 			}
 		}
 		catch(Exception e){}

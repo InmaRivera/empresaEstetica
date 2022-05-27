@@ -32,7 +32,7 @@ public class ConsultaCliente implements WindowListener, ActionListener
 	//objetos necesarios para la ventana de consulta clientes
 	Frame ventana = new Frame ("Consulta de Clientes");
 	MenuItem mniConsultaClientes = new MenuItem("Consulta");
-	TextArea txtClientes = new TextArea(5,24);
+	TextArea txtClientes = new TextArea(5,22);
 	Label lblClientes = new Label("CLIENTES");
 	Button btnPDF =  new Button ("Exportar a PDF");
 	BaseDatos bd = new BaseDatos();
@@ -51,7 +51,7 @@ public class ConsultaCliente implements WindowListener, ActionListener
 		this.tipoUsuario=tipoUsuario;
 		//Configuramos la ventana
 		ventana.setLayout(new FlowLayout());
-		ventana.setSize(250,210);
+		ventana.setSize(270,210);
 		ventana.add(lblClientes);
 		ventana.addWindowListener(this);
 		// Conectar con la BD

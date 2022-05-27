@@ -31,7 +31,7 @@ public class ConsultaCompras  implements WindowListener, ActionListener
 	//objetos necesarios para la ventana de consulta compras
 	Frame ventana = new Frame ("Consulta compras");
 	MenuItem mniConsultaCompras = new MenuItem("Consulta");
-	TextArea txtCompras = new TextArea(5,15);
+	TextArea txtCompras = new TextArea(5,18);
 	Label lblCompras = new Label("  COMPRAS   ");
 	Button btnPDF =  new Button ("Exportar a PDF");
 	//Añadimos objetos necesarios para PDF
@@ -49,7 +49,7 @@ public class ConsultaCompras  implements WindowListener, ActionListener
 		this.tipoUsuario = tipoUsuario;
 		//Configuramos la ventana
 		ventana.setLayout(new FlowLayout());
-		ventana.setSize(210,200);
+		ventana.setSize(250,200);
 		ventana.add(lblCompras);
 		ventana.addWindowListener(this);
 		// Conectar con la BD

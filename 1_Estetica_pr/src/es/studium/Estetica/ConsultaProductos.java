@@ -32,7 +32,7 @@ public class ConsultaProductos implements WindowListener, ActionListener
 	//Creamos los objetos necesarios para esta ventana
 	Frame ventana = new Frame ("Consulta de Productos");
 	MenuItem mniConsultaProductos = new MenuItem("Consulta");
-	TextArea txtProductos = new TextArea(5,15);
+	TextArea txtProductos = new TextArea(5,18);
 	Label lblProductos = new Label("PRODUCTOS");
 	Button btnPDF =  new Button ("Exportar a PDF");
 	//Añadimos objetos necesarios para PDF
@@ -50,11 +50,12 @@ public class ConsultaProductos implements WindowListener, ActionListener
 		this.tipoUsuario=tipoUsuario;
 		//Configuramos la pantalla y añadimos los Listeners
 		ventana.setLayout(new FlowLayout());
-		ventana.setSize(250,200);//aplicamos ancho y altura
+		ventana.setSize(260,200);//aplicamos ancho y altura
 		ventana.addWindowListener(this);
 		// Conectar con la BD
 		// Conectar con la BD
 		connection = bd.conectar();
+		ventana.add(lblProductos);
 		ventana.add(txtProductos);
 		txtProductos.setText(bd.ConsultaProductos(tipoUsuario));
 		btnPDF.addActionListener(this);
