@@ -1147,3 +1147,278 @@ join productos on idProducto = idProductoFK]
 [27//05/22 08:58:717][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
 join productos on idProducto = idProductoFK]
 [27//05/22 08:58:804][administrador][logOut]
+[27//05/22 20:06:502][administrador][login]
+[27//05/22 20:07:118][administrador][logOut]
+[27//05/22 20:08:319][administrador][login]
+[27//05/22 20:08:264][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 20:08:288][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 20:08:410][administrador][logOut]
+[27//05/22 20:09:649][administrador][login]
+[27//05/22 20:09:927][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[27//05/22 20:09:966][administrador][5-Marisa-Rivas Haustin-20.00-1
+]
+[27//05/22 20:09:998][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+]
+[27//05/22 20:09:13][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+]
+[27//05/22 20:09:24][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+]
+[27//05/22 20:09:36][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+]
+[27//05/22 20:09:48][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+]
+[27//05/22 20:09:59][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+]
+[27//05/22 20:09:70][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+]
+[27//05/22 20:09:81][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+15-Marisa-Rivas Haustin-25.00-1
+]
+[27//05/22 20:09:97][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+15-Marisa-Rivas Haustin-25.00-1
+16-Carmina-Gonzalez Jures-25.00-19
+]
+[27//05/22 20:09:111][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+15-Marisa-Rivas Haustin-25.00-1
+16-Carmina-Gonzalez Jures-25.00-19
+17-Carmina-Gonzalez Jures-60.00-19
+]
+[27//05/22 20:09:125][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+15-Marisa-Rivas Haustin-25.00-1
+16-Carmina-Gonzalez Jures-25.00-19
+17-Carmina-Gonzalez Jures-60.00-19
+18-Santiago -Rodriguez Muñoz-20.00-2
+]
+[27//05/22 20:10:204][administrador][logOut]
+[27//05/22 20:18:953][administrador][login]
+[27//05/22 20:18:40][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 20:18:101][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 20:28:641][administrador][login]
+[27//05/22 20:28:383][administrador][SELECT * FROM productos]
+[27//05/22 20:28:390][administrador][SELECT * FROM productos]
+[27//05/22 20:28:412][administrador][SELECT * FROM productos]
+[27//05/22 20:28:424][administrador][SELECT * FROM productos]
+[27//05/22 20:28:438][administrador][SELECT * FROM productos]
+[27//05/22 20:28:453][administrador][SELECT * FROM productos]
+[27//05/22 20:29:466][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 20:29:477][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 20:29:470][administrador][SELECT * FROM personas]
+[27//05/22 20:29:479][administrador][SELECT * FROM personas]
+[27//05/22 20:29:504][administrador][SELECT * FROM personas]
+[27//05/22 20:29:518][administrador][SELECT * FROM personas]
+[27//05/22 20:29:534][administrador][SELECT * FROM personas]
+[27//05/22 20:29:551][administrador][SELECT * FROM personas]
+[27//05/22 20:29:563][administrador][SELECT * FROM personas]
+[27//05/22 20:29:576][administrador][SELECT * FROM personas]
+[27//05/22 20:29:587][administrador][SELECT * FROM personas]
+[27//05/22 20:29:604][administrador][SELECT * FROM personas]
+[27//05/22 20:29:450][administrador][logOut]
+[27//05/22 20:31:973][administrador][login]
+[27//05/22 20:31:183][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 20:31:193][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 20:32:816][administrador][logOut]
+[27//05/22 20:34:425][administrador][login]
+[27//05/22 20:34:457][administrador][SELECT * FROM personas]
+[27//05/22 20:34:473][administrador][SELECT * FROM personas]
+[27//05/22 20:34:495][administrador][SELECT * FROM personas]
+[27//05/22 20:34:507][administrador][SELECT * FROM personas]
+[27//05/22 20:34:519][administrador][SELECT * FROM personas]
+[27//05/22 20:34:535][administrador][SELECT * FROM personas]
+[27//05/22 20:34:552][administrador][SELECT * FROM personas]
+[27//05/22 20:34:570][administrador][SELECT * FROM personas]
+[27//05/22 20:34:584][administrador][SELECT * FROM personas]
+[27//05/22 20:34:598][administrador][SELECT * FROM personas]
+[27//05/22 20:34:648][administrador][SELECT * FROM personas]
+[27//05/22 20:34:845][administrador][logOut]
+[27//05/22 20:35:782][administrador][login]
+[27//05/22 20:35:507][administrador][SELECT * FROM personas]
+[27//05/22 20:35:511][administrador][SELECT * FROM personas]
+[27//05/22 20:35:537][administrador][SELECT * FROM personas]
+[27//05/22 20:35:551][administrador][SELECT * FROM personas]
+[27//05/22 20:35:566][administrador][SELECT * FROM personas]
+[27//05/22 20:35:580][administrador][SELECT * FROM personas]
+[27//05/22 20:35:595][administrador][SELECT * FROM personas]
+[27//05/22 20:35:608][administrador][SELECT * FROM personas]
+[27//05/22 20:35:632][administrador][SELECT * FROM personas]
+[27//05/22 20:35:211][administrador][logOut]
+[27//05/22 20:35:391][administrador][login]
+[27//05/22 20:36:156][administrador][SELECT * FROM personas]
+[27//05/22 20:36:812][administrador][logOut]
+[27//05/22 20:36:09][administrador][login]
+[27//05/22 20:36:35][administrador][SELECT * FROM productos]
+[27//05/22 20:36:104][administrador][logOut]
+[27//05/22 20:37:333][administrador][login]
+[27//05/22 20:37:268][administrador][SELECT * FROM personas]
+[27//05/22 20:37:201][administrador][ConsultaPersona.pdf]
+[27//05/22 20:38:54][administrador][logOut]
+[27//05/22 20:39:670][administrador][login]
+[27//05/22 20:39:402][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 20:39:415][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 20:39:975][administrador][ConsultaCompras.pdf]
+[27//05/22 20:39:830][administrador][SELECT * FROM productos]
+[27//05/22 20:39:396][administrador][ConsultaProductos.pdf]
+[27//05/22 20:39:233][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[27//05/22 20:39:247][administrador][5-Marisa-Rivas Haustin-20.00-1
+]
+[27//05/22 20:39:275][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+]
+[27//05/22 20:39:291][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+]
+[27//05/22 20:39:312][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+]
+[27//05/22 20:39:329][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+]
+[27//05/22 20:39:341][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+]
+[27//05/22 20:39:354][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+]
+[27//05/22 20:39:367][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+]
+[27//05/22 20:39:381][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+15-Marisa-Rivas Haustin-25.00-1
+]
+[27//05/22 20:39:405][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+15-Marisa-Rivas Haustin-25.00-1
+16-Carmina-Gonzalez Jures-25.00-19
+]
+[27//05/22 20:39:420][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+15-Marisa-Rivas Haustin-25.00-1
+16-Carmina-Gonzalez Jures-25.00-19
+17-Carmina-Gonzalez Jures-60.00-19
+]
+[27//05/22 20:39:433][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+15-Marisa-Rivas Haustin-25.00-1
+16-Carmina-Gonzalez Jures-25.00-19
+17-Carmina-Gonzalez Jures-60.00-19
+18-Santiago -Rodriguez Muñoz-20.00-2
+]
+[27//05/22 20:39:32][administrador][ConsultaCliente.pdf]
+[27//05/22 20:39:617][administrador][SELECT * FROM personas]
+[27//05/22 20:39:794][administrador][ConsultaPersona.pdf]
+[27//05/22 20:39:98][administrador][logOut]
+[27//05/22 20:40:688][administrador][login]
+[27//05/22 20:40:530][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[27//05/22 20:40:474][administrador][ConsultaCliente.pdf]
+[27//05/22 20:41:86][administrador][logOut]

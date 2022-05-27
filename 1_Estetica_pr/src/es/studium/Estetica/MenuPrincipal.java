@@ -121,7 +121,7 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 		//Funcionalidad de los ítems
 		if(evento.getSource().equals(mniConsultaPersonas))
 		{
-			new ConsultaPersona();
+			new ConsultaPersona(tipoUsuario);
 		}
 		else if(evento.getSource().equals(mniAltaPersonas))
 		{
@@ -158,7 +158,7 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 		}
 		else if(evento.getSource().equals(mniConsultaProductos))
 		{
-			new ConsultaProductos();
+			new ConsultaProductos(tipoUsuario);
 		}
 		else if(evento.getSource().equals(mniBajaProductos))
 		{

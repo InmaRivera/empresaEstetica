@@ -67,7 +67,7 @@ public class BaseDatos
 		}
 		catch (SQLException e){}
 	}
-	public String ConsultaPersona()
+	public String ConsultaPersona(int tipoUsuario)
 	{
 		//Creamos la sentencia SQL para la consulta 
 		String contenido = "";
@@ -85,9 +85,11 @@ public class BaseDatos
 						"-"+ resultSet.getString("nombrePersona")+
 						"-"+ resultSet.getString("apellidosPersona")+"\n");
 			}
+			guardarLog(tipoUsuario, sentencia);
 		}
 		catch (SQLException e){}
 		return contenido;
+		
 	}
 	public int AltaPersona(Connection connection, String sentencia)
 	{
@@ -190,8 +192,7 @@ public class BaseDatos
 		String contenido = "";
 		//Añadimos join para poder ver los usuarios
 		sentencia = "SELECT * FROM clientes join personas on idPersona =  idPersonaFK";
-		//Hacemos registro de los movimientos y los guardamos en este fichero
-		guardarLog(tipoUsuario, sentencia);
+		
 		try
 		{
 			statement = connection.createStatement();
@@ -206,9 +207,10 @@ public class BaseDatos
 						"-"+ resultSet.getString("apellidosPersona")+
 						"-"+ resultSet.getString("descuentoCliente")+
 						"-"+ resultSet.getString("idPersonaFK")+"\n");
-				guardarLog(tipoUsuario, contenido);
 				
 			}
+			//Hacemos registro de los movimientos y los guardamos en este fichero
+			guardarLog(tipoUsuario, sentencia);
 		}
 		catch (SQLException e){}
 		return contenido;
@@ -326,7 +328,7 @@ public class BaseDatos
 		return (resultado);
 	}
 
-	public String ConsultaProductos()
+	public String ConsultaProductos(int tipoUsuario)
 	{
 		//Creamos la sentencia SQL para la consulta 
 		String contenido = "";
@@ -345,9 +347,11 @@ public class BaseDatos
 						"-"+ resultSet.getString("cantidadProducto")+
 						"-"+ resultSet.getString("ivaProducto")+"\n");
 			}
+			guardarLog(tipoUsuario, sentencia);
 		}
 		catch (SQLException e){}
 		return contenido;
+		
 
 	}
 	public ResultSet rellenarProducto(Connection connection)

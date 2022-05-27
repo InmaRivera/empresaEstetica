@@ -36,11 +36,11 @@ public class ConsultaCliente implements WindowListener, ActionListener
 	Label lblClientes = new Label("CLIENTES");
 	Button btnPDF =  new Button ("Exportar a PDF");
 	BaseDatos bd = new BaseDatos();
-	//Añadimos componentes necesarios para PDF
+	//Añadimos objetos necesarios para PDF
 	public static final String DEST = "ConsultaCliente.pdf";
 	PdfFont font;
 	PdfWriter writer;
-	//
+	//Conexiones a la base de datos
 	Connection connection = null;
 	Statement statement = null;
 	ResultSet resultSet = null;
@@ -137,6 +137,8 @@ public class ConsultaCliente implements WindowListener, ActionListener
 			}
 			catch(IOException ioe) {}		
 		}
+		//Guardamos los registros cuando pulsen PDF
+				bd.guardarLog(tipoUsuario, DEST);
 		bd.desconectar();
 	}
 	
