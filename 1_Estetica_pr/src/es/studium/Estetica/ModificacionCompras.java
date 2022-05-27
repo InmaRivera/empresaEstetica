@@ -44,9 +44,10 @@ public class ModificacionCompras implements WindowListener, ActionListener
 	int idProducto = 0;
 	Connection connection = null;
 	ResultSet rs = null;
-	public ModificacionCompras()
+	int tipoUsuario;
+	public ModificacionCompras(int tipoUsuario)
 	{
-
+		this.tipoUsuario=tipoUsuario;
 		//Pantalla
 		ventana.setLayout(new FlowLayout());
 		ventana.setSize(300,200);
@@ -82,7 +83,9 @@ public class ModificacionCompras implements WindowListener, ActionListener
 			{
 				choCompras.add(rs.getInt("idCompra") + "-" +
 						rs.getString("idClienteFK") + "-" +
-						rs.getString("idProductoFK"));
+						rs.getString("nombrePersona") + "-" +
+						rs.getString("idProductoFK") + "-" +
+						rs.getString("tipoProducto"));
 			}
 		}
 		catch(Exception e){}
@@ -151,7 +154,7 @@ public class ModificacionCompras implements WindowListener, ActionListener
 				String sentencia = "UPDATE estetica_pr.compras SET idClienteFK = '"+ idClienteFK + 
 						"', idProductoFK = '" + idProductoFK +
 						"' WHERE idCompra = " + idCompra ;	
-				System.out.println(sentencia);
+				bd.guardarLog(tipoUsuario, sentencia);
 
 				if ((bd.ModificacionCompra(sentencia)==0)) 
 				{
@@ -178,14 +181,15 @@ public class ModificacionCompras implements WindowListener, ActionListener
 		// Conectar BD
 		bd.conectar();
 		//Sacar a los clientes de la tabla 
-		rs=bd.elegirPersonas(bd.conectar());
+		rs=bd.elegirClientes(bd.conectar());
 		try
 		{
 			while (rs.next())
 			{
 				choPersonas.add(rs.getInt("idCliente") + "-" +
 						rs.getString("descuentoCliente") + "-" +
-						rs.getString("idPersonaFK"));
+						rs.getString("idPersonaFK") + "-" +
+						rs.getString("nombrePersona"));
 			}
 		}
 		catch(Exception e){}

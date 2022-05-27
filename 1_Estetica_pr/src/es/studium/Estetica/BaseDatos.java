@@ -114,7 +114,7 @@ public class BaseDatos
 		catch (SQLException sqle){}
 		return (resultado);
 	}
-	public int BajaPersona(int idPersona)
+	public int BajaPersona(int idPersona, int tipoUsuario)
 	{
 		//Aplicamos la sentencia para la baja personas
 		int resultado = 0;
@@ -126,6 +126,7 @@ public class BaseDatos
 			statement = connection.createStatement();
 			//Ejecutamos el comando borrar
 			String sentencia = "DELETE FROM personas WHERE idPersona = "+ idPersona;
+			guardarLog(tipoUsuario, sentencia);
 			statement.executeUpdate(sentencia);
 		}
 		catch (SQLException sqle)
@@ -134,6 +135,7 @@ public class BaseDatos
 			resultado = -1;
 		}
 		return (resultado);
+		
 	}
 	public int ModificacionPersona(String sentencia)
 	{
@@ -263,7 +265,7 @@ public class BaseDatos
 		return (resultado);
 	}
 
-	public ResultSet elegirPersonas(Connection connection)
+	public ResultSet elegirClientes(Connection connection)
 	{
 		//Creanmos la instrucción para ejecutar la sentencia buscar al cliente de nuestra base
 		ResultSet rs = null;
@@ -271,7 +273,8 @@ public class BaseDatos
 		{
 
 			statement = connection.createStatement();
-			rs = statement.executeQuery( "SELECT * FROM clientes");					
+			//Añadimos el join para poder ver el nombre del cliente
+			rs = statement.executeQuery("SELECT * FROM clientes join personas on idPersona = idPersonaFK");					
 
 
 		}
@@ -367,7 +370,7 @@ public class BaseDatos
 		return (rs);
 	}
 
-	public int BajaProducto(int idProducto)
+	public int BajaProducto(int idProducto, int tipoUsuario)
 	{
 		//Aplicamos la sentencia para la baja personas
 		int resultado = 0;
@@ -379,6 +382,7 @@ public class BaseDatos
 			statement = connection.createStatement();
 			//Ejecutamos el comando borrar
 			String sentencia = "DELETE FROM productos WHERE idProducto = "+ idProducto;
+			guardarLog(tipoUsuario, sentencia);
 			statement.executeUpdate(sentencia);
 		}
 		catch (SQLException sqle)
@@ -464,15 +468,16 @@ public class BaseDatos
 				{
 
 					statement = connection.createStatement();
-					rs = statement.executeQuery( "SELECT * FROM compras");					
-
+					//Añadimos join para ver los nombres de los clientes y los productos más su id
+					rs = statement.executeQuery( "SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK \r\n"
+							+ "join productos on idProducto = idProductoFK");					
 
 				}
 				catch (SQLException sqle){}
 				return (rs);
 	}
 
-	public int BajaCompra(int idCompra)
+	public int BajaCompra(int idCompra, int tipoUsuario)
 	{
 		//Creamos la instrucción con una sentencia para la baja de la compra
 		int resultado = 0;
@@ -485,7 +490,7 @@ public class BaseDatos
 			//Ejecutamos el comando borrar
 			String sentencia = "DELETE FROM compras WHERE idCompra = "+ idCompra;
 			statement.executeUpdate(sentencia);
-			System.out.println(sentencia);
+			guardarLog(tipoUsuario, sentencia);
 		}
 		catch (SQLException sqle)
 		{

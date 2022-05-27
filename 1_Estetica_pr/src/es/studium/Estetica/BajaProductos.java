@@ -30,9 +30,10 @@ public class BajaProductos implements WindowListener, ActionListener
 	ResultSet rs = null;
 	int idProductoBorrar = 0;
 
-	public BajaProductos()
+	int tipoUsuario;
+	public BajaProductos(int tipoUsuario)
 	{
-
+		this.tipoUsuario=tipoUsuario;
 		//Listener
 		ventana.addWindowListener(this);
 		btnBorrar.addActionListener(this);
@@ -107,7 +108,7 @@ public class BajaProductos implements WindowListener, ActionListener
 			bd.conectar();
 			//cadena para coger los datos 
 			String[] array = choProducto.getSelectedItem().split("-");
-			int resultado = bd.BajaProducto(Integer.parseInt(array[0]));
+			int resultado = bd.BajaProducto(Integer.parseInt(array[0]),tipoUsuario);
 			if (resultado == 0)
 			{
 				//si todo sale bien mensaje de correcto

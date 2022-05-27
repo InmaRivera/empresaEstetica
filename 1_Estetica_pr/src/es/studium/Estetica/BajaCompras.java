@@ -30,9 +30,10 @@ public class BajaCompras implements WindowListener, ActionListener
 	BaseDatos bd = new BaseDatos();
 	ResultSet rs = null;
 	int idPersonaBorrar = 0;
-
-	public BajaCompras()
+	int tipoUsuario;
+	public BajaCompras(int tipoUsuario)
 	{
+		this.tipoUsuario=tipoUsuario;
 		//Listener
 		ventana.addWindowListener(this);
 		btnBorrar.addActionListener(this);
@@ -63,9 +64,13 @@ public class BajaCompras implements WindowListener, ActionListener
 		{
 			while (rs.next())
 			{
+				//Después de añadir los join en base 
+				//Especificamos los nombres de lo que queremos mostrar
 				choCompras.add(rs.getInt("idCompra") + "-" +
 						rs.getString("idClienteFK") + "-" +
-						rs.getString("idProductoFK"));
+						rs.getString("nombrePersona") + "-" +
+						rs.getString("idProductoFK") + "-" +
+						rs.getString("tipoProducto"));
 			}
 		}
 		catch(Exception e){}
@@ -102,7 +107,7 @@ public class BajaCompras implements WindowListener, ActionListener
 			bd.conectar();
 			//cadena para coger los datos 
 			String[] array = choCompras.getSelectedItem().split("-");
-			int resultado = bd.BajaCompra(Integer.parseInt(array[0]));
+			int resultado = bd.BajaCompra(Integer.parseInt(array[0]), tipoUsuario);
 			if (resultado == 0)
 			{
 				//si todo sale bien mensaje de correcto

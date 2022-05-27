@@ -60,14 +60,16 @@ public class BajaCliente implements WindowListener, ActionListener
 		// Conectar BD
 		bd.conectar();
 		//Sacar a los clientes de la tabla 
-		rs=bd.elegirPersonas(bd.conectar());
+		rs=bd.elegirClientes(bd.conectar());
 		try
 		{
 			while (rs.next())
 			{
+				//Se mostrará también los productos que tienen los clientes, este caso el descuento
 				choPersonas.add(rs.getInt("idCliente") + "-" +
+						rs.getString("idPersonaFK") + "-" +
 						rs.getString("descuentoCliente") + "-" +
-						rs.getString("idPersonaFK"));
+						rs.getString("nombrePersona"));
 			}
 		}
 		catch(Exception e){}

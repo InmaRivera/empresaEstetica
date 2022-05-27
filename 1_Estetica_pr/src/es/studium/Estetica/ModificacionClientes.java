@@ -41,15 +41,14 @@ public class ModificacionClientes implements WindowListener, ActionListener
 	int idCliente = 0;
 	Connection connection = null;
 	ResultSet rs = null;
-
+	int tipoUsuario;
 	//Constructor
-	public ModificacionClientes()
+	public ModificacionClientes(int tipoUsuario)
 	{
+		this.tipoUsuario=tipoUsuario;
 		//Listener
 		ventana.addWindowListener(this);
 		btnEditar.addActionListener(this);
-
-
 		//Pantalla
 		ventana.setLayout(new FlowLayout());
 		ventana.setSize(300,200);
@@ -60,14 +59,15 @@ public class ModificacionClientes implements WindowListener, ActionListener
 		// Conectar BD
 		bd.conectar();
 		//Sacar a los clientes de la tabla 
-		rs=bd.elegirPersonas(bd.conectar());
+		rs=bd.elegirClientes(bd.conectar());
 		try
 		{
 			while (rs.next())
 			{
 				choPersonas.add(rs.getInt("idCliente") + "-" +
 						rs.getString("descuentoCliente") + "-" +
-						rs.getString("idPersonaFK"));
+						rs.getString("idPersonaFK") + "-" +
+						rs.getString("nombrePersona"));
 			}
 		}
 		catch(Exception e){}
@@ -118,6 +118,7 @@ public class ModificacionClientes implements WindowListener, ActionListener
 			//Ejecutamos comando modificar "Update"
 			String sentencia = "UPDATE estetica_pr.clientes SET descuentoCliente = '"+ descuentoNuevo + 
 					"' WHERE idCliente = " + idCliente;	
+			bd.guardarLog(tipoUsuario, sentencia);
 			if ((bd.ModificacionCliente(sentencia)==0)) 
 			{
 				//Si todo bien

@@ -45,9 +45,10 @@ public class ModificacionProductos implements WindowListener, ActionListener
 	int idProducto = 0;
 	Connection connection = null;
 	ResultSet rs = null;
-
-	public ModificacionProductos()
+	int tipoUsuario;
+	public ModificacionProductos(int tipoUsuario)
 	{
+		this.tipoUsuario=tipoUsuario;
 		//Listener
 		ventana.addWindowListener(this);
 		btnEditar.addActionListener(this);
@@ -133,7 +134,7 @@ public class ModificacionProductos implements WindowListener, ActionListener
 					"', precioVentaProducto= '" + venta +
 					"', precioCompraProducto= '" + compra + 
 					"' WHERE idProducto = " + idProducto;
-			System.out.println(sentencia);
+			bd.guardarLog(tipoUsuario, sentencia);
 			if ((bd.ModificacionPersona(sentencia)==0)) 
 			{
 				// Todo bien

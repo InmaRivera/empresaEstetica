@@ -66,7 +66,7 @@ public class AltaCompras implements WindowListener, ActionListener
 		// Conectar BD
 		bd.conectar();
 		//Sacar a los clientes de la tabla 
-		rs=bd.elegirPersonas(bd.conectar());
+		rs=bd.elegirClientes(bd.conectar());
 		try
 		{
 			while (rs.next())
@@ -142,7 +142,6 @@ public class AltaCompras implements WindowListener, ActionListener
 				// Hacer el insert
 				String sentencia = "INSERT INTO compras VALUES (null, '";
 				sentencia+= + idClienteFK + "'," + "'" + idProductoFK + "'" +");";
-				System.out.println(sentencia);
 				bd.guardarLog(tipoUsuario, sentencia);
 				if((bd.AltaCompra(connection, sentencia))==0) 
 				{

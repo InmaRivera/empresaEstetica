@@ -129,11 +129,11 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 		}
 		else if(evento.getSource().equals(mniBajaPersonas))
 		{
-			new BajaPersona();
+			new BajaPersona(tipoUsuario);
 		}
 		else if(evento.getSource().equals(mniModificacionPersonas))
 		{
-			new ModificacionPersona();
+			new ModificacionPersona(tipoUsuario);
 		}
 		else if(evento.getSource().equals(mniConsultaClientes))
 		{
@@ -150,11 +150,11 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 		}
 		else if(evento.getSource().equals(mniModificacionClientes))
 		{
-			new ModificacionClientes();
+			new ModificacionClientes(tipoUsuario);
 		}
 		else if(evento.getSource().equals(mniAltaProductos))
 		{
-			new AltaProductos();
+			new AltaProductos(tipoUsuario);
 		}
 		else if(evento.getSource().equals(mniConsultaProductos))
 		{
@@ -162,11 +162,11 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 		}
 		else if(evento.getSource().equals(mniBajaProductos))
 		{
-			new BajaProductos();
+			new BajaProductos(tipoUsuario);
 		}
 		else if(evento.getSource().equals(mniModificacionProductos))
 		{
-			new ModificacionProductos();
+			new ModificacionProductos(tipoUsuario);
 		}
 		else if(evento.getSource().equals(mniConsultaCompras))
 		{
@@ -178,11 +178,11 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 		}
 		else if(evento.getSource().equals(mniBajaCompras))
 		{
-			new BajaCompras();
+			new BajaCompras(tipoUsuario);
 		}
 		else if (evento.getSource().equals(mniModificacionCompras))
 		{
-			new ModificacionCompras();
+			new ModificacionCompras(tipoUsuario);
 		}
 	}
 	public void paint(Graphics g)

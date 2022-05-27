@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.sql.Connection;
 import java.sql.ResultSet;
 
 public class BajaPersona implements WindowListener, ActionListener
@@ -26,13 +27,18 @@ public class BajaPersona implements WindowListener, ActionListener
 	Dialog dlgMensaje = new Dialog(ventana,"Mensaje", true);
 	Label lblMensaje = new Label("XXXXXXXXXXXXXXXXXX");
 
+	//conexión a base de datos
 	BaseDatos bd = new BaseDatos();
 	ResultSet rs = null;
 	int idPersonaBorrar = 0;
+	Connection connection = null;
+	int tipoUsuario;
 
 	//Constructor
-	public BajaPersona()
+	public BajaPersona(int tipoUsuario)
 	{
+		//para poder guardar los registros
+		this.tipoUsuario=tipoUsuario;
 		//Listener
 		ventana.addWindowListener(this);
 		btnBorrar.addActionListener(this);
@@ -104,7 +110,7 @@ public class BajaPersona implements WindowListener, ActionListener
 			bd.conectar();
 			//cadena para coger los datos 
 			String[] array = choPersonas.getSelectedItem().split("-");
-			int resultado = bd.BajaPersona(Integer.parseInt(array[0]));
+			int resultado = bd.BajaPersona(Integer.parseInt(array[0]), tipoUsuario);			
 			if (resultado == 0)
 			{
 				//si todo sale bien mensaje de correcto

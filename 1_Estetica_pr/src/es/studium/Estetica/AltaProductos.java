@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.sql.Connection;
+import java.sql.ResultSet;
 
 public class AltaProductos implements WindowListener, ActionListener
 {
@@ -33,8 +34,12 @@ public class AltaProductos implements WindowListener, ActionListener
 	//para conectar con la clase base de datos
 	BaseDatos bd = new BaseDatos();
 	Connection connection = null;
-	public AltaProductos()
+	ResultSet rs = null;
+	int tipoUsuario;
+	public AltaProductos(int tipoUsuario)
 	{
+		//Para poder dar funcionalidad al FicheroLog
+		this.tipoUsuario=tipoUsuario;
 		//Configuración de la ventana
 		ventana.setLayout(new FlowLayout());
 		//tamaño ancho, alto
@@ -98,7 +103,8 @@ public class AltaProductos implements WindowListener, ActionListener
 				String sentencia = "INSERT INTO productos VALUES (null, '" ;
 				sentencia+=  tipo + "', '" + cantidad + "', '" + iva 
 						+"', '" + venta + "', '" + compra + "');";
-				System.out.println(sentencia);
+				//Guardamos los registros
+				bd.guardarLog(tipoUsuario, sentencia);
 
 				if((bd.AltaProducto(connection, sentencia))==0) 
 				{

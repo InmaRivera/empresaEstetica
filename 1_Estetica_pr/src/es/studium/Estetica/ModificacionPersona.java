@@ -48,13 +48,13 @@ public class ModificacionPersona implements WindowListener, ActionListener
 	int idPersona = 0;
 	Connection connection = null;
 	ResultSet rs = null;
-
-	public ModificacionPersona()
+	int tipoUsuario;
+	public ModificacionPersona(int tipoUsuario)
 	{
+		this.tipoUsuario=tipoUsuario;
 		//Listener
 		ventana.addWindowListener(this);
 		btnEditar.addActionListener(this);
-
 
 		//Pantalla
 		ventana.setLayout(new FlowLayout());
@@ -137,7 +137,7 @@ public class ModificacionPersona implements WindowListener, ActionListener
 					"', telefonoPersona= '" + telefonooNuevo + 
 					"', emailPersona = '" + emailNuevo + 
 					"' WHERE idPersona = " + idPersona;
-
+			bd.guardarLog(tipoUsuario, sentencia);
 			if ((bd.ModificacionPersona(sentencia)==0)) 
 			{
 				// Todo bien
