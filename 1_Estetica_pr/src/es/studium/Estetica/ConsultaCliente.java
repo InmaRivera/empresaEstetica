@@ -36,9 +36,11 @@ public class ConsultaCliente implements WindowListener, ActionListener
 	Label lblClientes = new Label("CLIENTES");
 	Button btnPDF =  new Button ("Exportar a PDF");
 	BaseDatos bd = new BaseDatos();
+	//Añadimos componentes necesarios para PDF
 	public static final String DEST = "ConsultaCliente.pdf";
 	PdfFont font;
 	PdfWriter writer;
+	//
 	Connection connection = null;
 	Statement statement = null;
 	ResultSet resultSet = null;

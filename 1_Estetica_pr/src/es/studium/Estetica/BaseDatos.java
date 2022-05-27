@@ -188,7 +188,9 @@ public class BaseDatos
 	{
 		//Creamos la instrucción para ejecutar la sentencia en la consulta de clientes
 		String contenido = "";
+		//Añadimos join para poder ver los usuarios
 		sentencia = "SELECT * FROM clientes join personas on idPersona =  idPersonaFK";
+		//Hacemos registro de los movimientos y los guardamos en este fichero
 		guardarLog(tipoUsuario, sentencia);
 		try
 		{
@@ -396,11 +398,15 @@ public class BaseDatos
 		return (rs);
 	}
 
-	public String ConsultaCompras()
+	public String ConsultaCompras(int tipoUsuario)
 	{
 		//Creamos la instrucción para ejecutar la sentencia en la consulta de compras
 		String contenido = "";
-		sentencia = "SELECT * FROM compras";
+		//Añadimos los join para ver los nombres de productos y clientes;
+		//Al tener dos FK necesitamos hacer más join que cuando es uno, la sentencia queda más larga
+		sentencia = "SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK \r\n"
+				+ "join productos on idProducto = idProductoFK";
+		guardarLog(tipoUsuario, sentencia);
 		try
 		{
 			statement = connection.createStatement();
@@ -412,8 +418,11 @@ public class BaseDatos
 			{
 				contenido = contenido + (resultSet.getInt("idCompra")+
 						"-"+ resultSet.getString("idClienteFK")+
-						"-"+ resultSet.getString("idProductoFK")+"\n");
+						"-"+ resultSet.getString("nombrePersona")+
+						"-"+ resultSet.getString("idProductoFK")+
+						"-"+ resultSet.getString("tipoProducto")+"\n");
 			}
+			guardarLog(tipoUsuario, sentencia);
 		}
 		catch (SQLException e){}
 		return contenido;

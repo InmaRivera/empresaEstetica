@@ -20,8 +20,10 @@ public class ConsultaCompras  implements WindowListener, ActionListener
 	Label lblCompras = new Label("  COMPRAS   ");
 	Button btnPDF =  new Button ("Exportar a PDF");
 	BaseDatos bd = new BaseDatos();
-	public ConsultaCompras()
+	int tipoUsuario;
+	public ConsultaCompras(int tipoUsuario)
 	{
+		this.tipoUsuario = tipoUsuario;
 		//Configuramos la ventana
 		ventana.setLayout(new FlowLayout());
 		ventana.setSize(210,200);
@@ -31,7 +33,7 @@ public class ConsultaCompras  implements WindowListener, ActionListener
 		bd.conectar();
 
 		ventana.add(txtCompras);
-		txtCompras.setText(bd.ConsultaCompras());
+		txtCompras.setText(bd.ConsultaCompras(tipoUsuario));
 		btnPDF.addActionListener(this);
 		ventana.add(btnPDF);
 		bd.desconectar();

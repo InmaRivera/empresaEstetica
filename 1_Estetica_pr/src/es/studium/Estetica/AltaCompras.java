@@ -31,10 +31,11 @@ public class AltaCompras implements WindowListener, ActionListener
 	BaseDatos bd = new BaseDatos();
 	Connection connection = null;
 	ResultSet rs = null;
-
-	public AltaCompras()
+	int tipoUsuario;
+	public AltaCompras(int tipoUsuario)
 	{
-
+		//Para poder dar funcionalidad al FicheroLog
+		this.tipoUsuario=tipoUsuario;
 		//Configuración de la ventana y Listeners
 		ventana.setLayout(new FlowLayout());
 		ventana.setSize(280,200);
@@ -142,7 +143,7 @@ public class AltaCompras implements WindowListener, ActionListener
 				String sentencia = "INSERT INTO compras VALUES (null, '";
 				sentencia+= + idClienteFK + "'," + "'" + idProductoFK + "'" +");";
 				System.out.println(sentencia);
-
+				bd.guardarLog(tipoUsuario, sentencia);
 				if((bd.AltaCompra(connection, sentencia))==0) 
 				{
 					// Todo bien

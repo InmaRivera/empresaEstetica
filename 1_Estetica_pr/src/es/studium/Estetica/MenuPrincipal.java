@@ -170,11 +170,11 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 		}
 		else if(evento.getSource().equals(mniConsultaCompras))
 		{
-			new ConsultaCompras();
+			new ConsultaCompras(tipoUsuario);
 		}
 		else if(evento.getSource().equals(mniAltaCompras))
 		{
-			new AltaCompras();
+			new AltaCompras(tipoUsuario);
 		}
 		else if(evento.getSource().equals(mniBajaCompras))
 		{

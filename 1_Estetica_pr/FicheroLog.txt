@@ -1128,3 +1128,22 @@
 35-Carmina María- Sagra Astola-34.00-1
 ]
 [25//05/22 12:34:163][administrador][logOut]
+[27//05/22 08:36:576][administrador][login]
+[27//05/22 08:36:602][administrador][INSERT INTO compras VALUES (null, '5','3');]
+[27//05/22 08:36:838][administrador][logOut]
+[27//05/22 08:38:227][administrador][login]
+[27//05/22 08:39:86][administrador][logOut]
+[27//05/22 08:43:155][administrador][login]
+[27//05/22 08:43:484][administrador][logOut]
+[27//05/22 08:45:908][administrador][login]
+[27//05/22 08:45:319][administrador][logOut]
+[27//05/22 08:50:595][administrador][login]
+[27//05/22 08:50:177][administrador][logOut]
+[27//05/22 08:51:356][administrador][login]
+[27//05/22 08:52:49][administrador][logOut]
+[27//05/22 08:57:38][administrador][login]
+[27//05/22 08:58:705][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 08:58:717][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 08:58:804][administrador][logOut]
