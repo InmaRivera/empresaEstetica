@@ -138,12 +138,10 @@ public class ConsultaCliente implements WindowListener, ActionListener
 			catch(IOException ioe) {}		
 		}
 		//Guardamos los registros cuando pulsen PDF
-				bd.guardarLog(tipoUsuario, DEST);
+		bd.guardarLog(tipoUsuario, DEST);
 		bd.desconectar();
 	}
 	
-
-
 	@Override
 	public void windowOpened(WindowEvent e)
 	{
