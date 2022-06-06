@@ -1,0 +1,1584 @@
+[23//05/22 12:26:557][basico][ Login ][null]
+[23//05/22 12:31:965][basico][ Login ][INSERT INTO personas VALUES (null, 'Inma', 'San', 'Sa', 'jsjsdh', '267836', 'djjsd');]
+[23//05/22 12:38:49][basico][ Login ][INSERT INTO clientes VALUES (null, '50','1');]
+[23//05/22 12:50:704][basico][ Login ][INSERT INTO clientes VALUES (null, '30','1');]
+[23//05/22 12:55:158][administrador][ Login ][INSERT INTO clientes VALUES (null, '39','1');]
+[23//05/22 12:58:870][administrador][ Login ][login]
+[23//05/22 12:58:864][administrador][ Login ][INSERT INTO clientes VALUES (null, '33','1');]
+[23//05/22 12:58:223][administrador][ Login ][logOut]
+[23//05/22 13:05:716][administrador][login]
+[23//05/22 13:05:148][administrador][logOut]
+[23//05/22 13:08:53][administrador][login]
+[23//05/22 13:08:294][administrador][null]
+[23//05/22 13:08:372][administrador][logOut]
+[23//05/22 13:10:702][administrador][login]
+[23//05/22 13:10:69][administrador][null]
+[23//05/22 13:10:923][administrador][logOut]
+[23//05/22 13:14:123][administrador][login]
+[23//05/22 13:14:745][administrador][DELETE FROM clientes WHERE idCliente = 36]
+[23//05/22 13:14:291][administrador][logOut]
+[23//05/22 13:21:363][administrador][login]
+[23//05/22 13:21:178][administrador][SELECT * FROM clientes]
+[23//05/22 13:21:183][administrador][32-30.00-3
+]
+[23//05/22 13:21:191][administrador][32-30.00-3
+33-25.00-4
+]
+[23//05/22 13:21:198][administrador][32-30.00-3
+33-25.00-4
+34-35.00-2
+]
+[23//05/22 13:21:206][administrador][32-30.00-3
+33-25.00-4
+34-35.00-2
+35-34.00-1
+]
+[23//05/22 13:23:917][administrador][login]
+[23//05/22 13:23:614][administrador][SELECT * FROM clientes JOIN personas ON idPersona]
+[23//05/22 13:23:635][administrador][35-34.00-1
+]
+[23//05/22 13:23:640][administrador][35-34.00-1
+34-35.00-2
+]
+[23//05/22 13:23:649][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+]
+[23//05/22 13:23:656][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+]
+[23//05/22 13:23:666][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+]
+[23//05/22 13:23:673][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+]
+[23//05/22 13:23:682][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+]
+[23//05/22 13:23:689][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+]
+[23//05/22 13:23:704][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+]
+[23//05/22 13:23:711][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+]
+[23//05/22 13:23:733][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+]
+[23//05/22 13:23:740][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+]
+[23//05/22 13:23:748][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+]
+[23//05/22 13:23:989][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+]
+[23//05/22 13:23:17][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+]
+[23//05/22 13:23:39][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+]
+[23//05/22 13:23:52][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+]
+[23//05/22 13:23:65][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+]
+[23//05/22 13:23:74][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+]
+[23//05/22 13:23:82][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+]
+[23//05/22 13:23:109][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+]
+[23//05/22 13:23:142][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+]
+[23//05/22 13:23:177][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+]
+[23//05/22 13:23:210][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+]
+[23//05/22 13:23:464][administrador][logOut]
+[23//05/22 13:23:602][administrador][logOut]
+[23//05/22 13:25:706][administrador][login]
+[23//05/22 13:25:340][administrador][SELECT * FROM clientes JOIN personas ON idPersonaFK]
+[23//05/22 13:25:361][administrador][35-34.00-1
+]
+[23//05/22 13:25:381][administrador][35-34.00-1
+34-35.00-2
+]
+[23//05/22 13:25:423][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+]
+[23//05/22 13:25:449][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+]
+[23//05/22 13:25:474][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+]
+[23//05/22 13:25:516][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+]
+[23//05/22 13:25:540][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+]
+[23//05/22 13:25:566][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+]
+[23//05/22 13:25:591][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+]
+[23//05/22 13:25:616][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+]
+[23//05/22 13:25:641][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+]
+[23//05/22 13:25:666][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+]
+[23//05/22 13:25:691][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+]
+[23//05/22 13:25:716][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+]
+[23//05/22 13:25:741][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+]
+[23//05/22 13:25:765][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+]
+[23//05/22 13:25:791][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+]
+[23//05/22 13:25:816][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+]
+[23//05/22 13:25:841][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+]
+[23//05/22 13:25:866][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+]
+[23//05/22 13:25:891][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+]
+[23//05/22 13:25:916][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+]
+[23//05/22 13:25:949][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+]
+[23//05/22 13:25:982][administrador][35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+35-34.00-1
+34-35.00-2
+33-25.00-4
+32-30.00-3
+]
+[23//05/22 13:25:120][administrador][logOut]
+[23//05/22 13:31:852][administrador][login]
+[23//05/22 13:31:426][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[23//05/22 13:31:432][administrador][32-Marisa-30.00-3
+]
+[23//05/22 13:31:462][administrador][32-Marisa-30.00-3
+33-Sonia-25.00-4
+]
+[23//05/22 13:31:487][administrador][32-Marisa-30.00-3
+33-Sonia-25.00-4
+34-Santiago Manolo-35.00-2
+]
+[23//05/22 13:31:512][administrador][32-Marisa-30.00-3
+33-Sonia-25.00-4
+34-Santiago Manolo-35.00-2
+35-Carmina María-34.00-1
+]
+[23//05/22 13:34:790][administrador][logOut]
+[23//05/22 13:36:510][administrador][login]
+[23//05/22 13:36:252][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[23//05/22 13:36:259][administrador][32-Marisa-Rivero Haustin-30.00-3
+]
+[23//05/22 13:36:309][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+]
+[23//05/22 13:36:359][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+]
+[23//05/22 13:36:402][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+35-Carmina María- Sagra Astola-34.00-1
+]
+[23//05/22 13:36:94][administrador][logOut]
+[23//05/22 13:37:69][administrador][login]
+[23//05/22 13:37:366][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[23//05/22 13:37:371][administrador][32-Marisa-Rivero Haustin-30.00-3
+]
+[23//05/22 13:37:409][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+]
+[23//05/22 13:37:450][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+]
+[23//05/22 13:37:484][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+35-Carmina María- Sagra Astola-34.00-1
+]
+[23//05/22 13:37:445][administrador][logOut]
+[23//05/22 13:38:376][administrador][login]
+[23//05/22 13:38:510][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[23//05/22 13:38:520][administrador][32-Marisa-Rivero Haustin-30.00-3
+]
+[23//05/22 13:38:548][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+]
+[23//05/22 13:38:573][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+]
+[23//05/22 13:38:598][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+35-Carmina María- Sagra Astola-34.00-1
+]
+[23//05/22 13:38:317][administrador][logOut]
+[23//05/22 13:38:729][administrador][login]
+[23//05/22 13:39:613][administrador][32-Marisa-Rivero Haustin-30.00-3
+]
+[23//05/22 13:39:617][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+]
+[23//05/22 13:39:646][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+]
+[23//05/22 13:39:670][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+35-Carmina María- Sagra Astola-34.00-1
+]
+[23//05/22 13:39:804][administrador][logOut]
+[23//05/22 13:39:967][administrador][login]
+[23//05/22 13:39:768][administrador][32-Marisa-Rivero Haustin-30.00-3
+]
+[23//05/22 13:39:772][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+]
+[23//05/22 13:39:817][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+]
+[23//05/22 13:39:858][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+35-Carmina María- Sagra Astola-34.00-1
+]
+[23//05/22 13:39:701][administrador][logOut]
+[23//05/22 13:40:792][administrador][login]
+[23//05/22 13:40:949][administrador][32-Marisa-Rivero Haustin-30.00-3
+]
+[23//05/22 13:40:959][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+]
+[23//05/22 13:40:990][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+]
+[23//05/22 13:40:31][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+35-Carmina María- Sagra Astola-34.00-1
+]
+[23//05/22 13:40:277][administrador][logOut]
+[23//05/22 13:40:836][administrador][login]
+[23//05/22 13:40:496][administrador][32-Marisa-Rivero Haustin-30.00-3
+]
+[23//05/22 13:40:500][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+]
+[23//05/22 13:40:545][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+]
+[23//05/22 13:40:570][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+35-Carmina María- Sagra Astola-34.00-1
+]
+[23//05/22 13:40:213][administrador][logOut]
+[23//05/22 13:40:185][administrador][login]
+[23//05/22 13:40:227][administrador][32-Marisa-Rivero Haustin-30.00-3
+]
+[23//05/22 13:40:232][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+]
+[23//05/22 13:40:269][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+]
+[23//05/22 13:40:294][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+35-Carmina María- Sagra Astola-34.00-1
+]
+[23//05/22 13:40:44][administrador][logOut]
+[23//05/22 13:45:393][administrador][login]
+[23//05/22 13:45:387][administrador][logOut]
+[23//05/22 14:00:922][administrador][login]
+[23//05/22 14:00:376][administrador][logOut]
+[23//05/22 21:59:765][administrador][login]
+[23//05/22 21:59:795][administrador][5-Marisa-Rivas Haustin-20.00-1
+]
+[23//05/22 21:59:800][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+]
+[23//05/22 21:59:821][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+]
+[23//05/22 21:59:832][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+]
+[23//05/22 21:59:842][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+]
+[23//05/22 21:59:853][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+]
+[23//05/22 21:59:869][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+]
+[23//05/22 21:59:883][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+]
+[23//05/22 21:59:899][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+15-Marisa-Rivas Haustin-25.00-1
+]
+[23//05/22 21:59:912][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+15-Marisa-Rivas Haustin-25.00-1
+16-Carmina-Gonzalez Jures-25.00-19
+]
+[23//05/22 21:59:924][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+15-Marisa-Rivas Haustin-25.00-1
+16-Carmina-Gonzalez Jures-25.00-19
+17-Carmina-Gonzalez Jures-60.00-19
+]
+[23//05/22 21:59:29][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+15-Marisa-Rivas Haustin-25.00-1
+16-Carmina-Gonzalez Jures-25.00-19
+17-Carmina-Gonzalez Jures-60.00-19
+18-Santiago -Rodriguez Muñoz-20.00-2
+]
+[23//05/22 22:00:784][administrador][logOut]
+[23//05/22 22:01:457][administrador][login]
+[23//05/22 22:01:956][administrador][]
+[23//05/22 22:01:430][administrador][logOut]
+[23//05/22 22:01:967][administrador][login]
+[23//05/22 22:01:398][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[23//05/22 22:02:02][administrador][logOut]
+[25//05/22 11:10:92][administrador][login]
+[25//05/22 11:10:568][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[25//05/22 11:10:635][administrador][35-Carmina María- Sagra Astola-34.00-1
+]
+[25//05/22 11:10:637][administrador][35-Carmina María- Sagra Astola-34.00-1
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+]
+[25//05/22 11:10:671][administrador][35-Carmina María- Sagra Astola-34.00-1
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+32-Marisa-Rivero Haustin-30.00-3
+]
+[25//05/22 11:10:714][administrador][35-Carmina María- Sagra Astola-34.00-1
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+]
+[25//05/22 11:10:271][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[25//05/22 11:10:95][administrador][logOut]
+[25//05/22 11:11:417][administrador][login]
+[25//05/22 11:11:852][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[25//05/22 11:11:857][administrador][32-Marisa-Rivero Haustin-30.00-3
+]
+[25//05/22 11:11:901][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+]
+[25//05/22 11:11:942][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+]
+[25//05/22 11:11:968][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+35-Carmina María- Sagra Astola-34.00-1
+]
+[25//05/22 11:11:928][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[25//05/22 11:11:207][administrador][logOut]
+[25//05/22 11:59:503][administrador][login]
+[25//05/22 11:59:622][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[25//05/22 11:59:628][administrador][32-Marisa-Rivero Haustin-30.00-3
+]
+[25//05/22 11:59:655][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+]
+[25//05/22 11:59:682][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+]
+[25//05/22 11:59:705][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+35-Carmina María- Sagra Astola-34.00-1
+]
+[25//05/22 11:59:260][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[25//05/22 12:03:525][administrador][login]
+[25//05/22 12:03:302][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[25//05/22 12:03:316][administrador][32-Marisa-Rivero Haustin-30.00-3
+]
+[25//05/22 12:03:353][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+]
+[25//05/22 12:03:387][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+]
+[25//05/22 12:03:420][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+35-Carmina María- Sagra Astola-34.00-1
+]
+[25//05/22 12:03:724][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[25//05/22 12:03:979][administrador][logOut]
+[25//05/22 12:20:947][administrador][login]
+[25//05/22 12:20:818][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[25//05/22 12:20:882][administrador][32-Marisa-Rivero Haustin-30.00-3
+]
+[25//05/22 12:20:916][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+]
+[25//05/22 12:20:950][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+]
+[25//05/22 12:20:03][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+35-Carmina María- Sagra Astola-34.00-1
+]
+[25//05/22 12:20:111][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[25//05/22 12:24:554][administrador][login]
+[25//05/22 12:24:477][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[25//05/22 12:24:504][administrador][32-Marisa-Rivero Haustin-30.00-3
+]
+[25//05/22 12:24:537][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+]
+[25//05/22 12:24:563][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+]
+[25//05/22 12:24:718][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+35-Carmina María- Sagra Astola-34.00-1
+]
+[25//05/22 12:24:925][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[25//05/22 12:25:558][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[25//05/22 12:25:166][administrador][logOut]
+[25//05/22 12:25:19][administrador][login]
+[25//05/22 12:25:803][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[25//05/22 12:25:809][administrador][32-Marisa-Rivero Haustin-30.00-3
+]
+[25//05/22 12:25:842][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+]
+[25//05/22 12:25:867][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+]
+[25//05/22 12:25:892][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+35-Carmina María- Sagra Astola-34.00-1
+]
+[25//05/22 12:25:38][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[25//05/22 12:32:605][administrador][login]
+[25//05/22 12:32:171][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[25//05/22 12:32:196][administrador][32-Marisa-Rivero Haustin-30.00-3
+]
+[25//05/22 12:32:241][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+]
+[25//05/22 12:32:266][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+]
+[25//05/22 12:32:303][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+35-Carmina María- Sagra Astola-34.00-1
+]
+[25//05/22 12:32:316][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[25//05/22 12:33:377][administrador][login]
+[25//05/22 12:33:23][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[25//05/22 12:33:28][administrador][32-Marisa-Rivero Haustin-30.00-3
+]
+[25//05/22 12:33:62][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+]
+[25//05/22 12:33:103][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+]
+[25//05/22 12:33:128][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+35-Carmina María- Sagra Astola-34.00-1
+]
+[25//05/22 12:33:883][administrador][login]
+[25//05/22 12:33:547][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[25//05/22 12:33:551][administrador][32-Marisa-Rivero Haustin-30.00-3
+]
+[25//05/22 12:33:578][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+]
+[25//05/22 12:33:611][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+]
+[25//05/22 12:33:635][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+35-Carmina María- Sagra Astola-34.00-1
+]
+[25//05/22 12:34:687][administrador][login]
+[25//05/22 12:34:19][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[25//05/22 12:34:28][administrador][32-Marisa-Rivero Haustin-30.00-3
+]
+[25//05/22 12:34:56][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+]
+[25//05/22 12:34:82][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+]
+[25//05/22 12:34:107][administrador][32-Marisa-Rivero Haustin-30.00-3
+33-Sonia-Cortes Lozano-25.00-4
+34-Santiago Manolo-Rodriguez Muñiz-35.00-2
+35-Carmina María- Sagra Astola-34.00-1
+]
+[25//05/22 12:34:163][administrador][logOut]
+[27//05/22 08:36:576][administrador][login]
+[27//05/22 08:36:602][administrador][INSERT INTO compras VALUES (null, '5','3');]
+[27//05/22 08:36:838][administrador][logOut]
+[27//05/22 08:38:227][administrador][login]
+[27//05/22 08:39:86][administrador][logOut]
+[27//05/22 08:43:155][administrador][login]
+[27//05/22 08:43:484][administrador][logOut]
+[27//05/22 08:45:908][administrador][login]
+[27//05/22 08:45:319][administrador][logOut]
+[27//05/22 08:50:595][administrador][login]
+[27//05/22 08:50:177][administrador][logOut]
+[27//05/22 08:51:356][administrador][login]
+[27//05/22 08:52:49][administrador][logOut]
+[27//05/22 08:57:38][administrador][login]
+[27//05/22 08:58:705][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 08:58:717][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 08:58:804][administrador][logOut]
+[27//05/22 20:06:502][administrador][login]
+[27//05/22 20:07:118][administrador][logOut]
+[27//05/22 20:08:319][administrador][login]
+[27//05/22 20:08:264][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 20:08:288][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 20:08:410][administrador][logOut]
+[27//05/22 20:09:649][administrador][login]
+[27//05/22 20:09:927][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[27//05/22 20:09:966][administrador][5-Marisa-Rivas Haustin-20.00-1
+]
+[27//05/22 20:09:998][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+]
+[27//05/22 20:09:13][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+]
+[27//05/22 20:09:24][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+]
+[27//05/22 20:09:36][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+]
+[27//05/22 20:09:48][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+]
+[27//05/22 20:09:59][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+]
+[27//05/22 20:09:70][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+]
+[27//05/22 20:09:81][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+15-Marisa-Rivas Haustin-25.00-1
+]
+[27//05/22 20:09:97][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+15-Marisa-Rivas Haustin-25.00-1
+16-Carmina-Gonzalez Jures-25.00-19
+]
+[27//05/22 20:09:111][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+15-Marisa-Rivas Haustin-25.00-1
+16-Carmina-Gonzalez Jures-25.00-19
+17-Carmina-Gonzalez Jures-60.00-19
+]
+[27//05/22 20:09:125][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+15-Marisa-Rivas Haustin-25.00-1
+16-Carmina-Gonzalez Jures-25.00-19
+17-Carmina-Gonzalez Jures-60.00-19
+18-Santiago -Rodriguez Muñoz-20.00-2
+]
+[27//05/22 20:10:204][administrador][logOut]
+[27//05/22 20:18:953][administrador][login]
+[27//05/22 20:18:40][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 20:18:101][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 20:28:641][administrador][login]
+[27//05/22 20:28:383][administrador][SELECT * FROM productos]
+[27//05/22 20:28:390][administrador][SELECT * FROM productos]
+[27//05/22 20:28:412][administrador][SELECT * FROM productos]
+[27//05/22 20:28:424][administrador][SELECT * FROM productos]
+[27//05/22 20:28:438][administrador][SELECT * FROM productos]
+[27//05/22 20:28:453][administrador][SELECT * FROM productos]
+[27//05/22 20:29:466][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 20:29:477][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 20:29:470][administrador][SELECT * FROM personas]
+[27//05/22 20:29:479][administrador][SELECT * FROM personas]
+[27//05/22 20:29:504][administrador][SELECT * FROM personas]
+[27//05/22 20:29:518][administrador][SELECT * FROM personas]
+[27//05/22 20:29:534][administrador][SELECT * FROM personas]
+[27//05/22 20:29:551][administrador][SELECT * FROM personas]
+[27//05/22 20:29:563][administrador][SELECT * FROM personas]
+[27//05/22 20:29:576][administrador][SELECT * FROM personas]
+[27//05/22 20:29:587][administrador][SELECT * FROM personas]
+[27//05/22 20:29:604][administrador][SELECT * FROM personas]
+[27//05/22 20:29:450][administrador][logOut]
+[27//05/22 20:31:973][administrador][login]
+[27//05/22 20:31:183][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 20:31:193][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 20:32:816][administrador][logOut]
+[27//05/22 20:34:425][administrador][login]
+[27//05/22 20:34:457][administrador][SELECT * FROM personas]
+[27//05/22 20:34:473][administrador][SELECT * FROM personas]
+[27//05/22 20:34:495][administrador][SELECT * FROM personas]
+[27//05/22 20:34:507][administrador][SELECT * FROM personas]
+[27//05/22 20:34:519][administrador][SELECT * FROM personas]
+[27//05/22 20:34:535][administrador][SELECT * FROM personas]
+[27//05/22 20:34:552][administrador][SELECT * FROM personas]
+[27//05/22 20:34:570][administrador][SELECT * FROM personas]
+[27//05/22 20:34:584][administrador][SELECT * FROM personas]
+[27//05/22 20:34:598][administrador][SELECT * FROM personas]
+[27//05/22 20:34:648][administrador][SELECT * FROM personas]
+[27//05/22 20:34:845][administrador][logOut]
+[27//05/22 20:35:782][administrador][login]
+[27//05/22 20:35:507][administrador][SELECT * FROM personas]
+[27//05/22 20:35:511][administrador][SELECT * FROM personas]
+[27//05/22 20:35:537][administrador][SELECT * FROM personas]
+[27//05/22 20:35:551][administrador][SELECT * FROM personas]
+[27//05/22 20:35:566][administrador][SELECT * FROM personas]
+[27//05/22 20:35:580][administrador][SELECT * FROM personas]
+[27//05/22 20:35:595][administrador][SELECT * FROM personas]
+[27//05/22 20:35:608][administrador][SELECT * FROM personas]
+[27//05/22 20:35:632][administrador][SELECT * FROM personas]
+[27//05/22 20:35:211][administrador][logOut]
+[27//05/22 20:35:391][administrador][login]
+[27//05/22 20:36:156][administrador][SELECT * FROM personas]
+[27//05/22 20:36:812][administrador][logOut]
+[27//05/22 20:36:09][administrador][login]
+[27//05/22 20:36:35][administrador][SELECT * FROM productos]
+[27//05/22 20:36:104][administrador][logOut]
+[27//05/22 20:37:333][administrador][login]
+[27//05/22 20:37:268][administrador][SELECT * FROM personas]
+[27//05/22 20:37:201][administrador][ConsultaPersona.pdf]
+[27//05/22 20:38:54][administrador][logOut]
+[27//05/22 20:39:670][administrador][login]
+[27//05/22 20:39:402][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 20:39:415][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[27//05/22 20:39:975][administrador][ConsultaCompras.pdf]
+[27//05/22 20:39:830][administrador][SELECT * FROM productos]
+[27//05/22 20:39:396][administrador][ConsultaProductos.pdf]
+[27//05/22 20:39:233][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[27//05/22 20:39:247][administrador][5-Marisa-Rivas Haustin-20.00-1
+]
+[27//05/22 20:39:275][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+]
+[27//05/22 20:39:291][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+]
+[27//05/22 20:39:312][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+]
+[27//05/22 20:39:329][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+]
+[27//05/22 20:39:341][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+]
+[27//05/22 20:39:354][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+]
+[27//05/22 20:39:367][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+]
+[27//05/22 20:39:381][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+15-Marisa-Rivas Haustin-25.00-1
+]
+[27//05/22 20:39:405][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+15-Marisa-Rivas Haustin-25.00-1
+16-Carmina-Gonzalez Jures-25.00-19
+]
+[27//05/22 20:39:420][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+15-Marisa-Rivas Haustin-25.00-1
+16-Carmina-Gonzalez Jures-25.00-19
+17-Carmina-Gonzalez Jures-60.00-19
+]
+[27//05/22 20:39:433][administrador][5-Marisa-Rivas Haustin-20.00-1
+6-Carmina-Gonzalez Jures-25.00-19
+7-Santiago -Rodriguez Muñoz-25.00-2
+8-borrar-bor-10.00-20
+10-Marisa-Rivas Haustin-35.00-1
+11-borrar-bor-35.00-20
+12-borrar-bor-15.00-20
+14-borrar-bor-30.00-20
+15-Marisa-Rivas Haustin-25.00-1
+16-Carmina-Gonzalez Jures-25.00-19
+17-Carmina-Gonzalez Jures-60.00-19
+18-Santiago -Rodriguez Muñoz-20.00-2
+]
+[27//05/22 20:39:32][administrador][ConsultaCliente.pdf]
+[27//05/22 20:39:617][administrador][SELECT * FROM personas]
+[27//05/22 20:39:794][administrador][ConsultaPersona.pdf]
+[27//05/22 20:39:98][administrador][logOut]
+[27//05/22 20:40:688][administrador][login]
+[27//05/22 20:40:530][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[27//05/22 20:40:474][administrador][ConsultaCliente.pdf]
+[27//05/22 20:41:86][administrador][logOut]
+[27//05/22 21:03:185][administrador][login]
+[27//05/22 21:03:80][administrador][SELECT * FROM personas]
+[27//05/22 21:03:157][administrador][DELETE FROM personas WHERE idPersona = 20]
+[27//05/22 21:04:129][administrador][logOut]
+[27//05/22 21:07:30][administrador][login]
+[27//05/22 21:07:106][administrador][INSERT INTO productos VALUES (null, 'Limas', '100', '21', '10', '5');]
+[27//05/22 21:07:294][administrador][logOut]
+[28//05/22 00:35:316][administrador][login]
+[28//05/22 00:35:682][administrador][SELECT * FROM productos]
+[28//05/22 00:36:409][administrador][DELETE FROM productos WHERE idProducto = 13]
+[28//05/22 00:36:742][administrador][DELETE FROM compras WHERE idCompra = 18]
+[28//05/22 00:36:541][administrador][logOut]
+[28//05/22 00:39:297][administrador][login]
+[28//05/22 00:39:35][administrador][logOut]
+[28//05/22 00:45:602][administrador][login]
+[28//05/22 00:45:596][administrador][logOut]
+[28//05/22 00:45:720][administrador][login]
+[28//05/22 00:46:508][administrador][logOut]
+[28//05/22 00:47:801][administrador][login]
+[28//05/22 00:48:424][administrador][logOut]
+[28//05/22 00:49:556][administrador][login]
+[28//05/22 00:50:537][administrador][logOut]
+[28//05/22 00:52:553][administrador][login]
+[28//05/22 00:53:398][administrador][logOut]
+[28//05/22 00:55:305][administrador][login]
+[28//05/22 00:56:136][administrador][UPDATE estetica_pr.compras SET idClienteFK = '5', idProductoFK = '9' WHERE idCompra = 8]
+[28//05/22 00:56:897][administrador][logOut]
+[28//05/22 00:58:198][administrador][login]
+[28//05/22 00:58:346][administrador][UPDATE estetica_pr.productos SET tipoProducto = 'Cera caliente', cantidadProducto = '150', ivaProducto = '21.00', precioVentaProducto= '28.00', precioCompraProducto= '18.00' WHERE idProducto = 2]
+[28//05/22 00:58:606][administrador][logOut]
+[28//05/22 01:01:316][administrador][login]
+[28//05/22 01:01:407][administrador][logOut]
+[28//05/22 01:02:144][administrador][login]
+[28//05/22 01:02:712][administrador][logOut]
+[28//05/22 01:03:249][administrador][login]
+[28//05/22 01:03:867][administrador][UPDATE estetica_pr.clientes SET descuentoCliente = '30.00' WHERE idCliente = 6]
+[28//05/22 01:04:45][administrador][logOut]
+[28//05/22 01:05:624][administrador][login]
+[28//05/22 01:05:716][administrador][logOut]
+[28//05/22 01:06:207][administrador][login]
+[28//05/22 01:06:330][administrador][DELETE FROM clientes WHERE idCliente = 14]
+[28//05/22 01:06:462][administrador][DELETE FROM clientes WHERE idCliente = 8]
+[28//05/22 01:06:458][administrador][logOut]
+[28//05/22 01:09:522][administrador][login]
+[28//05/22 01:09:957][administrador][UPDATE estetica_pr.personas SET nombrePersona = 'Marisa', apellidosPersona = 'Rivas Haustin', dniPersona = '47294849S', domicilioPersona= 'Calle Corazón Mar, 17', telefonoPersona= '675848372', emailPersona = 'rivas_mar@gmail.com' WHERE idPersona = 1]
+[28//05/22 01:09:680][administrador][logOut]
+[28//05/22 01:11:594][administrador][login]
+[28//05/22 01:11:384][administrador][logOut]
+[28//05/22 01:14:442][administrador][login]
+[28//05/22 01:14:201][administrador][logOut]
+[28//05/22 01:15:245][administrador][login]
+[28//05/22 01:15:387][administrador][INSERT INTO compras VALUES (null, '5','3');]
+[28//05/22 01:15:804][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[28//05/22 01:15:816][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[28//05/22 01:16:465][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[28//05/22 01:16:176][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[28//05/22 01:16:312][administrador][ConsultaCliente.pdf]
+[28//05/22 01:16:329][administrador][logOut]
+[28//05/22 01:17:720][administrador][login]
+[28//05/22 01:17:991][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[28//05/22 01:17:323][administrador][logOut]
+[28//05/22 01:17:909][administrador][login]
+[28//05/22 01:17:315][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[28//05/22 01:17:582][administrador][logOut]
+[28//05/22 01:17:495][administrador][login]
+[28//05/22 01:18:467][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[28//05/22 01:18:745][administrador][logOut]
+[28//05/22 01:18:726][administrador][login]
+[28//05/22 01:18:924][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[28//05/22 01:18:68][administrador][SELECT * FROM personas]
+[28//05/22 01:18:844][administrador][SELECT * FROM productos]
+[28//05/22 01:18:190][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[28//05/22 01:18:206][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[28//05/22 01:18:823][administrador][logOut]
+[28//05/22 01:19:991][administrador][login]
+[28//05/22 01:19:26][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[28//05/22 01:19:49][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[28//05/22 01:19:508][administrador][logOut]
+[28//05/22 01:19:85][administrador][login]
+[28//05/22 01:19:422][administrador][SELECT * FROM personas]
+[28//05/22 01:19:772][administrador][logOut]
+[28//05/22 01:20:941][administrador][login]
+[28//05/22 01:20:754][administrador][SELECT * FROM personas]
+[28//05/22 01:20:11][administrador][logOut]
+[28//05/22 01:21:972][administrador][login]
+[28//05/22 01:21:288][administrador][SELECT * FROM personas]
+[28//05/22 01:21:499][administrador][logOut]
+[28//05/22 01:22:769][administrador][login]
+[28//05/22 01:22:561][administrador][SELECT * FROM productos]
+[28//05/22 01:22:850][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[28//05/22 01:22:857][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[28//05/22 01:22:400][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[28//05/22 01:22:947][administrador][logOut]
+[28//05/22 01:42:613][administrador][login]
+[28//05/22 01:46:378][administrador][logOut]
+[30//05/22 13:51:181][administrador][login]
+[30//05/22 13:51:147][administrador][logOut]
+[30//05/22 13:52:640][administrador][login]
+[30//05/22 13:52:879][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[30//05/22 13:52:171][administrador][ConsultaCliente.pdf]
+[30//05/22 13:54:505][administrador][logOut]
+[01//06/22 10:23:541][administrador][login]
+[01//06/22 10:26:473][administrador][logOut]
+[01//06/22 10:30:146][basico][login]
+[01//06/22 10:34:325][basico][logOut]
+[01//06/22 10:43:669][administrador][login]
+[01//06/22 10:43:941][administrador][SELECT * FROM productos]
+[01//06/22 10:52:788][administrador][INSERT INTO productos VALUES (null, 'Crema', ' 20', ' 21', ' 32', ' 50');]
+[01//06/22 11:03:966][administrador][logOut]
+[01//06/22 19:11:43][administrador][login]
+[01//06/22 19:22:622][administrador][SELECT * FROM clientes join personas on idPersona =  idPersonaFK]
+[01//06/22 20:21:279][administrador][logOut]
+[02//06/22 09:01:38][administrador][login]
+[02//06/22 09:01:958][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[02//06/22 09:01:11][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[02//06/22 10:49:583][administrador][logOut]
+[02//06/22 10:49:583][administrador][login]
+[02//06/22 10:49:939][administrador][UPDATE estetica_pr.personas SET nombrePersona = 'borrar', apellidosPersona = 'bor', dniPersona = '7384', domicilioPersona= '4385', telefonoPersona= '859', emailPersona = 'jiejf' WHERE idPersona = 20]
+[06//06/22 12:33:306][administrador][login]
+[06//06/22 12:33:465][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[06//06/22 12:33:615][administrador][SELECT * FROM compras join clientes on idCliente =  idClienteFK join personas on idPersona = idPersonaFK 
+join productos on idProducto = idProductoFK]
+[06//06/22 12:33:867][administrador][logOut]
+[06//06/22 12:53:363][administrador][login]
+[06//06/22 12:53:412][administrador][logOut]
+[06//06/22 12:57:400][administrador][login]
+[06//06/22 12:57:404][administrador][logOut]
+[06//06/22 12:57:983][administrador][login]
+[06//06/22 12:57:644][administrador][logOut]
+[06//06/22 12:58:319][administrador][login]
+[06//06/22 12:58:108][administrador][logOut]
+[06//06/22 13:01:935][administrador][login]
+[06//06/22 13:01:426][administrador][logOut]
+[06//06/22 13:02:589][administrador][login]
+[06//06/22 13:02:857][administrador][logOut]
+[06//06/22 13:02:271][administrador][login]
+[06//06/22 13:02:898][administrador][logOut]
+[06//06/22 13:02:871][administrador][login]
+[06//06/22 13:03:178][administrador][logOut]
+[06//06/22 13:03:173][administrador][login]
+[06//06/22 13:03:18][administrador][logOut]
+[06//06/22 13:03:214][administrador][login]
+[06//06/22 13:03:874][administrador][logOut]
+[06//06/22 13:04:278][administrador][login]
+[06//06/22 13:04:945][administrador][logOut]
+[06//06/22 13:04:337][administrador][login]
+[06//06/22 13:04:674][administrador][logOut]
+[06//06/22 13:05:482][administrador][login]
+[06//06/22 13:05:873][administrador][logOut]

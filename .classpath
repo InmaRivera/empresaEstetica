@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="G:/Mi unidad/DAW/EclipseNew/P - programacion/Tema7/mysql-connector-java-8.0.27.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="G:/Mi unidad/DAW/EclipseNew/P - programacion/barcodes-7.2.1.jar"/>
+	<classpathentry kind="lib" path="G:/Mi unidad/DAW/EclipseNew/P - programacion/commons-7.2.1.jar"/>
+	<classpathentry kind="lib" path="G:/Mi unidad/DAW/EclipseNew/P - programacion/font-asian-7.2.1.jar"/>
+	<classpathentry kind="lib" path="G:/Mi unidad/DAW/EclipseNew/P - programacion/forms-7.2.1.jar"/>
+	<classpathentry kind="lib" path="G:/Mi unidad/DAW/EclipseNew/P - programacion/hyph-7.2.1.jar"/>
+	<classpathentry kind="lib" path="G:/Mi unidad/DAW/EclipseNew/P - programacion/io-7.2.1.jar"/>
+	<classpathentry kind="lib" path="G:/Mi unidad/DAW/EclipseNew/P - programacion/kernel-7.2.1.jar"/>
+	<classpathentry kind="lib" path="G:/Mi unidad/DAW/EclipseNew/P - programacion/layout-7.2.1.jar"/>
+	<classpathentry kind="lib" path="G:/Mi unidad/DAW/EclipseNew/P - programacion/pdfa-7.2.1.jar"/>
+	<classpathentry kind="lib" path="G:/Mi unidad/DAW/EclipseNew/P - programacion/pdftest-7.2.1.jar"/>
+	<classpathentry kind="lib" path="G:/Mi unidad/DAW/EclipseNew/P - programacion/sign-7.2.1.jar"/>
+	<classpathentry kind="lib" path="G:/Mi unidad/DAW/EclipseNew/P - programacion/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="lib" path="G:/Mi unidad/DAW/EclipseNew/P - programacion/slf4j-nop-1.7.25.jar"/>
+	<classpathentry kind="lib" path="G:/Mi unidad/DAW/EclipseNew/P - programacion/styled-xml-parser-7.2.1.jar"/>
+	<classpathentry kind="lib" path="G:/Mi unidad/DAW/EclipseNew/P - programacion/svg-7.2.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
